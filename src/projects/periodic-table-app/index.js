@@ -5,7 +5,5 @@ import PeriodicTable from './components/periodic-table';
 
 import './styles.css';
 
-render(
-  <PeriodicTable />,
-  document.getElementById('root')
-);
+export default PeriodicTable;
+export './styles.css'

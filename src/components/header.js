@@ -1,11 +1,16 @@
 import React from 'react';
+import { Link } from 'react-router';
 
-const Header = (props) => {
+export const Header = () => {
     return (
         <header>
-            <div>HEADER</div>
+            <div className="header__banner">DYLAN'S WEBSITE</div>
+            <nav>
+                <Link to={"/"}>Home</Link>
+                <Link to={"/about"}>About</Link>
+                <Link to={"/experience"}>Experience</Link>
+                <Link to={"/contact"}>Contact</Link>
+            </nav>
         </header>
     )
 }
-
-export default Header;

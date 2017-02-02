@@ -1,6 +1,7 @@
 import React from 'react';
-import { Gig } from './Gig';
 import { resume } from './resume';
+import { Gig } from './components/Gig';
+import SkillChart from './components/skill-chart/SkillChart';
 import './experience.scss';
 
 export const Experience = () => {
@@ -19,6 +20,12 @@ export const Experience = () => {
     })
 
     return (
-        <div className="container__experience">{sections}</div>
+        <div className="container__experience">
+            <div className="experience__intro">Blurb</div>
+            <div className="experience__skill-chart">
+                <SkillChart />
+            </div>
+            <div className="experience__sections">{sections}</div>
+        </div>
     )
 }

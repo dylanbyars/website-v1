@@ -7,8 +7,6 @@ import { Experience } from './components/experience/Experience';
 import Projects from './components/projects/Projects';
 import Contact from './components/contact/Contact'
 
-// import PeriodicTable from './projects/periodic-table-app';
-
 class SweetWebsite extends Component {
   render() {
     return (

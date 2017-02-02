@@ -1,0 +1,308 @@
+/* Periodic Table App Styles */
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+/* Color Palette */
+
+$color-border: #50514F;
+$color-background: #F2EFE9;
+$color-text: #071108;
+$color-nonmetal: #1AFF00;
+$color-alkali-metal: #FF0C00;
+$color-alkaline-earth-metal: #FF6700;
+$color-transition-metal: #FF54A4;
+$color-metalloid: #FFB800;
+$color-metal: #FF762E;
+$color-halogen: #00EEFF;
+$color-noble-gas: #0E94FF;
+$color-lanthanoid: #FF006A;
+$color-actinoid: #FF00C6;
+$color-group-unconfirmed: #BADA55;
+$color-my-site: #507DBC;
+$color-modal-background: #FEFCFD;
+$color-modal-close-btn: #ED474A;
+
+.container__periodic-table {
+  height: 80vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Muli', sans-serif;
+  background-color: $color-background;
+  color: $color-text;
+}
+
+/* styling for the wandering cubes spinner element */
+
+.wandering-cubes {
+  width: 27px;
+  height: 27px;
+  position: relative;
+}
+
+/* Styles for the modal */
+
+.backdrop {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 9998;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  background: $color-modal-background;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 15px 10px;
+  border-radius: 4px;
+}
+
+.modal__close-btn {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  height: 21px;
+  width: 21px;
+}
+
+.modal__close-btn:hover {
+  cursor: pointer;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 15px 0 15px;
+}
+
+.modal-header__title {
+  font-size: 26px;
+}
+
+.modal-header__image {
+  max-width: 20vw;
+}
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0 20px;
+}
+
+.modal-content__summary {
+  font-size: 15px;
+}
+
+.modal-content__wiki-link {
+  padding: 10px 0 5px;
+  text-decoration: none;
+  transition: 100ms ease-out;
+}
+
+.modal-content__wiki-link:hover,
+.detail-link:hover {
+  color: $color-halogen;
+}
+
+.modal-details {
+  margin: 10px 0 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.modal-detail {
+  display: flex;
+  align-items: center;
+  margin: 5px 0;
+}
+
+.modal-detail__label,
+.modal-detail__value {
+  margin: 0 3px;
+}
+
+.modal-details__group > .modal-detail__value,
+.modal-details__state > .modal-detail__value {
+  text-transform: capitalize;
+}
+
+.detail-link {
+  text-decoration: none;
+  transition: 100ms ease-out;
+}
+
+.periodic-table {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 2vw;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 8vh;
+}
+
+.title {
+  font-size: 6vw;
+  font-weight: 600;
+}
+
+.subtitle {
+  font-size: 4vw;
+  margin-top: 1vh;
+}
+
+.main-block {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.f-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+}
+
+.f-block > div {
+  display: flex;
+  width: 80%;
+  max-width: 680px;
+  justify-content: space-around;
+}
+
+.element {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  width: 5vw;
+  height: 5vw;
+  margin: 1px;
+  border-radius: 2px;
+  border: 0.5px solid $color-border;
+}
+
+.element:hover {
+  cursor: pointer;
+}
+
+.nonmetal {
+  background-color: $color-nonmetal;
+}
+
+.alkali-metal {
+  background-color: $color-alkali-metal;
+}
+
+.alkaline-earth-metal {
+  background-color: $color-alkaline-earth-metal;
+}
+
+.transition-metal {
+  background-color: $color-transition-metal;
+}
+
+.metalloid {
+  background-color: $color-metalloid;
+}
+
+.metal {
+  background-color: $color-metal;
+}
+
+.halogen {
+  background-color: $color-halogen;
+}
+
+.noble-gas {
+  background-color: $color-noble-gas;
+}
+
+.lanthanoid {
+  background-color: $color-lanthanoid;
+}
+
+.actinoid {
+  background-color: $color-actinoid;
+}
+
+.probably-metal,
+.probably-noble-gas {
+  background-color: $color-group-unconfirmed;
+}
+
+.gas {
+  
+}
+
+.solid {
+  
+}
+
+.liquid {
+  
+}
+
+.state-unknown {
+  
+}
+
+.number {
+  position: absolute;
+  top: 8%;
+  right: 8%;
+  font-size: 1.2vw;
+  transition: inherit;
+}
+
+.symbol {
+  position: absolute;
+  bottom: 8%;
+  left: 8%;
+  font-size: 2.1vw;
+  transition: inherit;
+}
+
+@media (min-width: 900px) {
+  .element {
+    height: 45px;
+    width: 45px;
+  }
+
+  .number {
+    font-size: 13px;
+  }
+
+  .symbol {
+    font-size: 16px;
+  }
+
+  .modal {
+    max-width: 450px;
+  }
+}

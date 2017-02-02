@@ -69,8 +69,8 @@ class SearchInput extends Component {
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
-        <input className="search-input" type="text" onChange={this.handleInputChange} value={this.state.value} placeholder="Search for a city..." />
+      <form className="weather-app__form" onSubmit={this.handleSubmit}>
+        <input className="weather-app__search-input" type="text" onChange={this.handleInputChange} value={this.state.value} placeholder="Search for a city..." />
         {/*<button>Search</button>*/}
       </form>
     )

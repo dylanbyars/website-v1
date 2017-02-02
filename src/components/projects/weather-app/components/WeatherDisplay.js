@@ -23,14 +23,14 @@ export const WeatherDisplay = ({ data }) => {
   const tempImperial = tidyNumber(celciusToFahrenheit(temp))
 
   return (
-    <div className="display__container">
-      <div className="display__location">{location}</div>
-      <div className="display__temps">
-        <div className="display__temps--metric">{tempMetric} &deg;C</div>
-        <div className="display__temps--imperial">{tempImperial} &deg;F</div>
+    <div className="container__weather-display">
+      <div className="weather-display__location">{location}</div>
+      <div className="weather-display__temps">
+        <div className="weather-display__temps--metric">{tempMetric} &deg;C</div>
+        <div className="weather-display__temps--imperial">{tempImperial} &deg;F</div>
       </div>
-      <div className="display__description">{weather}</div>
-      <img className="display__icon" src={icon} alt={weather}/>
+      <div className="weather-display__description">{weather}</div>
+      <img className="weather-display__icon" src={icon} alt={weather}/>
     </div>
   )
 }

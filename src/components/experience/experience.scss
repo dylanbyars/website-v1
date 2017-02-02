@@ -1,11 +1,25 @@
 /* Experience Styles */
 
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
 .container__experience {
     display: flex;
     flex-direction: column;
 }
 
 .experience__section {
+    
+}
+
+.experience__category {
+
+}
+
+.experience__gigs {
     
 }
 

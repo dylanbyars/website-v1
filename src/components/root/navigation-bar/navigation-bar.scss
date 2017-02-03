@@ -1,0 +1,58 @@
+/* NavigationBar Element Styles */
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container__navbar {
+    width: 100%;
+    height: 10vh;
+    min-height: 65px;
+    display: flex;
+    flex-direction: row;
+    background-color: mediumpurple;
+}
+
+.navbar__items {
+    width: 100%;
+    min-width: 420px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid white;
+}
+
+.navbar__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar__home {
+    width: 20%;
+}
+
+.navbar__pages {
+    width: 35%;
+    min-width: 250px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.navbar__link {
+    text-decoration: none;
+    font-size: 18px;
+    font-family: sans-serif;
+}
+
+.navbar__link--active {
+    color: white;
+}
+
+@media (max-width: 560px) {
+    
+}

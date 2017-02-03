@@ -1,0 +1,18 @@
+/* Contact Element Styles */
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container__contact {
+  width: 45vw;
+  min-width: 500px;
+  height: 80%;
+  margin-right: 25px; 
+  display: flex;
+  background-color: tomato;
+}

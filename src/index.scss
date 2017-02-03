@@ -1,5 +1,12 @@
 /* Website Styles */
 
+$crimsonSky: #CF6766;
+$indigo: #30415D;
+$ultramarine: #031424;
+$lightBlue: #8EAEBD;
+
+// Main Styles
+
 *,
 *:before,
 *:after {
@@ -12,6 +19,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: sans-serif;
+  // background-color: #16A085;
 }
 
 #root {
@@ -19,4 +27,5 @@ body {
   height: 100%;
   padding: 0;
   margin: 0;
+  border: 5px solid red;
 }

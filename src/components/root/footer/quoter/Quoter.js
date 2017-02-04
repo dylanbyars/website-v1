@@ -2,23 +2,19 @@ import React, { Component } from 'react';
 import { quotes } from './quotes';
 import './quoter.scss';
 
-class Quoter extends Component {
-    render() {
+export const Quoter = () => {
 
-        const getRandomNumber = num =>  Math.floor((Math.random() * num))
-        const quoteCount = quotes.length
-        const randomQuote = quotes[getRandomNumber(quoteCount)]
-        const quoteText = randomQuote.quote
-        const quoteAuthor = randomQuote.author
+    const randomNumber = num =>  Math.floor((Math.random() * num))
 
-        return (
-            <div className="container__quoter">
-                <div className="quoter__quote">{quoteText}</div>
-                <div className="quoter__author">{quoteAuthor}</div>
-            </div>
-        )
-    }
+    const randomQuote = quotes[randomNumber(quotes.length)]
+    
+    const { quote, author} = randomQuote
 
+    return (
+        <div className="container__quoter">
+            <div className="quoter__quote">{quote}</div>
+            <div className="quoter__author">{author}</div>
+        </div>
+    )
 }
 
-export default Quoter;

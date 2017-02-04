@@ -14,5 +14,9 @@ export const quotes = [
   {
     "quote": "I would rather sit on a pumpkin and have it all to myself than be crowded on a velvet cushion.",
     "author": "Henry David Thoreau"
+  },
+  {
+    "quote": "Get on my level. You can't get on my level. You would need a space shuttle or a ladder that's forever.",
+    "author": "LW"
   }
 ]

@@ -1,6 +1,6 @@
 import React from 'react';
 import Contact from './contact/Contact';
-import Quoter from './quoter/Quoter';
+import { Quoter } from './quoter/Quoter';
 import './footer.scss';
 import codepenLogo from './icons/codepen-logo.svg';
 import githubLogo from './icons/github-logo.svg';

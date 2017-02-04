@@ -1,0 +1,120 @@
+/* Styles for NavBar element */
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  background: purple;
+  // z-index: 99999;
+}
+
+.nav__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav__link {
+  text-decoration: none;
+  color: white;
+}
+
+/* Full Nav Styles */
+
+.nav--full {
+  height: 15vh;
+  justify-content: space-between;
+}
+
+.nav__home--full {
+  width: 25%;
+  border: 1px solid white;
+}
+
+.nav__pages--full {
+  width: 35%;
+  min-width: 250px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border: 1px solid white;
+}
+
+.nav__item--full {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 100px;
+  border: 1px solid white;
+}
+
+.home__link {
+  font-family: sans-serif;
+  font-size: 23px;
+}
+
+/* 
+
+Animated letter spacing on hover
+
+Font weight is animatable but won't change linearly. Instead of having an awkward jump up in font weight halfway through the transition, increase the font weight right on hover so the instant jump is hidden by the nicely animated letter spacing. 
+
+*/
+
+.pages__link--full {
+  transition: letter-spacing 350ms ease-out;
+}
+
+.pages__link--full:hover {
+  font-weight: 600;
+  letter-spacing: .05em;
+}
+
+/* Collapsed Nav Styles */
+
+.nav--collapsed {
+  height: 13vh;
+  position: fixed;
+  top: 0;
+  z-index: 99999;
+}
+
+.nav__home--collapsed {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.menu-icon {
+  width: 35px;
+  margin: 0 5vw;
+}
+
+.collapsed__display {
+  width: 80vw;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+/*   border: 1px solid white; */
+}
+
+.collapsed__brand {
+  
+}
+
+.nav__item--collapsed {
+  
+}
+
+.pages__link--collapsed {
+  
+}

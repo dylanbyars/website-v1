@@ -1,20 +1,21 @@
-import React, { Component } from 'react';
-import NavBar from './nav-bar/NavBar';
-import { Footer } from './footer/Footer';
+import React from 'react';
+import NavBar from './components/nav-bar/NavBar';
+import { Footer } from './components/footer/Footer';
 import './root.scss';
 
-class Root extends Component {
-    render() {
-        return (
-            <div className="container__root">
-                <NavBar />
-                <div className="root__content">
-                    {this.props.children}
-                </div>
-                <Footer />
-            </div>
-        )
-    }
-}
+export const Root = ({ children }) => {
 
-export default Root;
+    return (
+        <div className="container__root">
+            
+            <NavBar />
+            
+            <div className="root__content">
+                {children}
+            </div>
+            
+            {/*<Footer />*/}
+
+        </div>
+    )
+}

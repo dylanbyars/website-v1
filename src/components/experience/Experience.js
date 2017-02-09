@@ -1,4 +1,5 @@
 import React from 'react';
+import { ExperienceHeader } from './components/ExperienceHeader';
 import { resume } from './resume';
 import { Gig } from './components/Gig';
 import SkillChart from './components/skill-chart/SkillChart';
@@ -21,11 +22,24 @@ export const Experience = () => {
 
     return (
         <div className="container__experience">
-            <div className="experience__intro">Blurb</div>
-            <div className="experience__skill-chart">
-                <SkillChart />
+            <div className="experience__intro">
+
             </div>
-            <div className="experience__sections">{sections}</div>
+
+            <div className="experience__header">
+                <ExperienceHeader />
+            </div>
+
+            <div className="experience__content">
+
+                <div className="content__skill-chart">
+                    <SkillChart />
+                </div>
+
+                <div className="content__sections">{sections}</div>
+            
+            </div>
+            
         </div>
     )
 }

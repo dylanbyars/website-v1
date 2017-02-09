@@ -6,7 +6,12 @@
   box-sizing: border-box;
 }
 
-/* Color Palette */
+// Sizing Variables
+
+$height-min: 500px;
+$width-max--modal: 450px;
+
+// Color Palette
 
 $color-border: #50514F;
 $color-background: #F2EFE9;
@@ -27,8 +32,9 @@ $color-modal-background: #FEFCFD;
 $color-modal-close-btn: #ED474A;
 
 .container__periodic-table {
-  height: 100vh;
-  width: 100vw;
+  height: 110vh;
+  min-height: $height-min;
+  height:100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -49,10 +55,10 @@ $color-modal-close-btn: #ED474A;
 
 .backdrop {
   position: absolute;
-  top: 0px;
+  top: 13vh;
   left: 0px;
   width: 100%;
-  height: 100%;
+  height: 110%;
   z-index: 9998;
   background: rgba(0, 0, 0, 0.3);
 }
@@ -61,7 +67,7 @@ $color-modal-close-btn: #ED474A;
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, calc(-50% + 13vh));
   z-index: 9999;
   background: $color-modal-background;
   display: flex;
@@ -69,6 +75,10 @@ $color-modal-close-btn: #ED474A;
   justify-content: space-between;
   padding: 15px 10px;
   border-radius: 4px;
+  min-width: 320px;
+  width: 45vw;
+  max-width: $width-max--modal;
+  max-height: 85vh;
 }
 
 .modal__close-btn {

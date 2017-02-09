@@ -1,23 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router';
 
-export const NavFull = ({
-  homeLink,
-  pagesLinks
-}) => {
+export const NavFull = ({ homeLink, pagesLinks }) => {
 
-  const {
-    homeText,
-    homePath
-  } = homeLink
+  const { homeText, homePath } = homeLink
 
-  const links = pagesLinks.map(({
-    text,
-    path
-  }) => {
+  const links = pagesLinks.map(({ text, path }) => {
     return (
-      <div className="nav__item--full">
-        <Link key={text} to={path} className="nav__link pages__link--full">{text}</Link>
+      <div className="nav__item--full" key={text}>
+        <Link to={path} className="nav__link pages__link--full">{text}</Link>
       </div>
     )
   })

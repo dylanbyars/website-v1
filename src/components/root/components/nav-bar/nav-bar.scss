@@ -80,23 +80,15 @@ Font weight is animatable but won't change linearly. Instead of having an awkwar
 
 /* Collapsed Nav Styles */
 
-.nav--collapsed {
+.nav--collapsed1 {
   height: 13vh;
-  position: fixed;
-  top: 0;
-  z-index: 99999;
+  // position: absolute;
+  // top: 0;
+  // z-index: 99999;
 }
 
-.nav__home--collapsed {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-}
+.nav__menu--collapsed {
 
-.menu-icon {
-  width: 35px;
-  margin: 0 5vw;
 }
 
 .collapsed__display {
@@ -107,14 +99,18 @@ Font weight is animatable but won't change linearly. Instead of having an awkwar
 /*   border: 1px solid white; */
 }
 
+.collapsed__display--home {
+
+}
+
+.collapsed__display--links {
+
+}
+
+.collapsed__display--link {
+
+}
+
 .collapsed__brand {
-  
-}
 
-.nav__item--collapsed {
-  
-}
-
-.pages__link--collapsed {
-  
 }

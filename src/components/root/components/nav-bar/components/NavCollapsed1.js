@@ -7,8 +7,8 @@ export const NavCollapsed1 = ({ homeLink, pagesLinks }) => {
     
     const links = pagesLinks.map( ({ text, path }) => {
       return (
-        <div className="collapsed">
-          <Link key={text} to={path} className="nav__link collapsed__display--page">{text}</Link>
+        <div className="collapsed__display collapsed__display--link">
+          <Link key={text} to={path} className="nav__link collapsed__brand">{text}</Link>
         </div>
       )
     })

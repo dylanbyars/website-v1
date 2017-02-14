@@ -1,0 +1,30 @@
+/* Root Element Styles */
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container__root {
+  position: relative;
+  width: 100vw;
+  min-height: 100vh;
+}
+
+.root__content {
+  position: relative; 
+  top: 105px;
+  // equal to the height of the Footer
+  // margin-bottom: -145px;
+}
+
+// TODO: figure out how to get the footer pushed the bottom of each page consistently. I think there's a styling issue with the bottom margins in the Experience and Projects elements. 
+
+.root__content:after {
+  content: '';
+  display: block;
+  height: 145px;
+}

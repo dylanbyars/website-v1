@@ -46,8 +46,8 @@ $color--red: #EC7263;
     position: absolute;
     content: '';
     top: 50%;
-    left: 0;
-    width: 100%;
+    left: 25%;
+    width: 50%;
     height: 2px;
     background-color: $color--red;
     border-radius: 5px;
@@ -126,10 +126,11 @@ $color--red: #EC7263;
 
   // Making the "X" icon using `:before` and `:after` pseudo-elements
   & > .nav-toggle__button {
-    box-shadow: 0 0 0 325px rgba(0, 0, 0, 0.1), inset 0 0 0 35px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 0 325px rgba(0, 0, 0, 0.9), inset 0 0 0 35px rgba(0, 0, 0, 0.9);
 
     &:hover {
-      box-shadow: 0 0 0 325px rgba(0, 0, 0, 0.1), inset 0 0 0 35px rgba(0, 0, 0, 0.1), 0 0 0 8px rgba(0, 0, 0, 0.1), inset 0 0 0 35px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 0 0 325px rgba(0, 0, 0, 0.9), inset 0 0 0 35px rgba(0, 0, 0, 0.9), 0 0 0 8px rgba(0, 0, 0, 0.9), inset 0 0 0 35px rgba(0, 0, 0, 0.9);
+      border: 1px solid yellow;
     }
 
     &:before {

@@ -1,7 +1,6 @@
 import React from 'react';
 import { Header } from './components/header/Header';
 import { Footer } from './components/footer/Footer';
-import './root.scss';
 
 export const Root = ({ children }) => {
 
@@ -14,7 +13,7 @@ export const Root = ({ children }) => {
                 {children}
             </div>
             
-            {/*<Footer />*/}
+            <Footer />
 
         </div>
     )

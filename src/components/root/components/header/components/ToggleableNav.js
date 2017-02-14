@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
-import './toggleable-nav.scss';
 
 class ToggleableNav extends Component {
   
@@ -17,12 +16,27 @@ class ToggleableNav extends Component {
         {link: 'Projects',
         path: '/projects'},
         {link: 'About',
-        path: '/about'}
+        path: '/about'},
+        // maybe make this so it jumps to the Holla section that'll be in the bottom of each page in the footer.
+        // {link: 'Contact',
+        // path: '#'}
       ]
     }
     
     this.toggleMenu = this.toggleMenu.bind(this)
-    
+    this.checkKeycode = this.checkKeycode.bind(this)
+  }
+
+  componentDidMount() {
+    // listen for the escape key and close menu area if it's heard
+    window.addEventListener('keydown', this.checkKeycode)
+  }
+
+  // Closes the menu area if user hits the escape key when the menu is open
+  checkKeycode(e) {
+    if (e.code === 'Escape' && this.state.menuOpen) {
+      this.toggleMenu()
+    }
   }
   
   toggleMenu() {

@@ -7,23 +7,20 @@
 }
 
 .container__footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
   min-width: 100vw;
+  height: 145px;
   display: flex;
   flex-direction: column;
-}
-
-.footer-content {
-  min-height: 45vh;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  border: solid;
+  background-color: red;
 }
 
 .footer__social-media {
   display: flex;
-  width: 60%;
-  margin: 8vh 0;
+  width: 65%;
   justify-content: space-around;
   align-items: center;
   border: solid;
@@ -39,10 +36,6 @@
 
 .footer__social-img {
   height: 45px;
-}
-
-.footer__contact {
-  width: 80vw;
 }
 
 .footer__bottom {

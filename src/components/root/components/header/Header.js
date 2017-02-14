@@ -1,6 +1,5 @@
 import React from 'react';
 import ToggleableNav from './components/ToggleableNav';
-import './header.scss';
 
 export const Header = () => {
 

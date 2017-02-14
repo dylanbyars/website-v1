@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { ProjectPreview } from './components/ProjectPreview';
 import PeriodicTable from './components/periodic-table-app/PeriodicTable';
 import WeatherApp from './components/weather-app/WeatherApp';
-import './projects.scss';
 
 class Projects extends Component {
 

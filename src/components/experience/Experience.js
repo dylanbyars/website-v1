@@ -3,7 +3,6 @@ import { ExperienceHeader } from './components/ExperienceHeader';
 import { resume } from './resume';
 import { Gig } from './components/Gig';
 import SkillChart from './components/skill-chart/SkillChart';
-import './experience.scss';
 
 export const Experience = () => {
 

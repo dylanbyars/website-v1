@@ -4,7 +4,6 @@ import Spinner from 'react-spinkit';
 import Modal from './components/Modal';
 import { Header } from './components/Header';
 import { Group } from './components/Group';
-import './periodic-table.scss';
 
 class PeriodicTable extends Component {
   constructor(props) {

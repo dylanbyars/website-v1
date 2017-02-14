@@ -6,6 +6,7 @@ import Home from './components/home/Home';
 import { Experience } from './components/experience/Experience';
 import Projects from './components/projects/Projects';
 import { About } from './components/about/About';
+import './styles/main.scss';
 
 class SweetWebsite extends Component {
   render() {

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { HomeHeader } from './components/HomeHeader';
-import './home.scss';
 
 class Home extends Component {
 

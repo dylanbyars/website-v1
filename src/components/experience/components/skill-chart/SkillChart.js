@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import ReactTransitionGroup from 'react-addons-transition-group';
 import SkillBar from './components/SkillBar';
 import { Key } from './components/Key';
-import './skill-chart.scss';
 
 class SkillChart extends Component {
   constructor(props) {

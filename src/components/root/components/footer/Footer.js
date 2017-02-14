@@ -1,9 +1,10 @@
 import React from 'react';
-import { ReactTransitionGroup } from 'react-addons-transition-group';
-// import FooterSocial from './components/footer-social/FooterSocial';
-import SocialMediaAnimations from './components/footer-social/FooterSocial';
-import { Quoter } from './components/quoter/Quoter';
-import './footer.scss';
+// import { Quoter } from './components/quoter/Quoter';
+// icons
+import codepenLogo from './icons/codepen-logo--border.svg';
+import githubLogo from './icons/github-logo.svg';
+import linkedinLogo from './icons/linkedin-logo.svg';
+import emailIcon from './icons/email-icon.svg';
 
 export const Footer = () => {
 
@@ -11,14 +12,25 @@ export const Footer = () => {
 
         <footer className="container__footer">
             
-            <div className="footer__content">
+            <div className="footer__social-media">
 
-                <ReactTransitionGroup>
+                <div className="footer__social-item">
+                    <a className="footer__social-link" href="https://www.github.com/dbyars"><img className="footer__social-img" src={githubLogo} alt="Github Logo" /></a>
+                </div>
 
-                    <SocialMediaAnimations />
+                <div className="footer__social-item">
+                    <a className="footer__social-link"href="https://www.codepen.io/dylanbyars"><img className="footer__social-img" src={codepenLogo} alt="Codepen Logo" /></a>
+                </div>
 
-                </ReactTransitionGroup>
-                
+                <div className="footer__social-item">
+                    <a className="footer__social-link" href="https://www.linkedin.com/in/dylanbyars"><img className="footer__social-img" src={linkedinLogo} alt="LinkedIn Logo" /></a>
+                </div>
+
+                <div className="footer__social-item">
+                    <a href="mailto:dylan@dylanbyars.com?subject=Hi, Dylan!&body=Can you ubild me a website?">
+<img className="footer__social-img" src={emailIcon} alt="Holler" /></a>
+                </div>
+
             </div>
 
         </footer>

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { quotes } from './quotes';
-import './quoter.scss';
 
 export const Quoter = () => {
 

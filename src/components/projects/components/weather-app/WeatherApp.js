@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import SearchInput from './components/SearchInput';
 import { WeatherDisplay } from './components/WeatherDisplay';
-import './weather-app.scss';
 
 class WeatherApp extends Component {
   constructor() {

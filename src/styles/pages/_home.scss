@@ -1,5 +1,11 @@
 /* Home Element Styles */
 
+// Font for my name in the header
+@import url('https://fonts.googleapis.com/css?family=Annie+Use+Your+Telescope|Architects+Daughter|Indie+Flower');
+
+// Font for the sub heading
+@import url('https://fonts.googleapis.com/css?family=Heebo:100');
+
 *,
 *:before,
 *:after {
@@ -7,9 +13,31 @@
 }
 
 .container__home {
-    height: 85vh;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
-.home__blurb {
+.home__db {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14vw;
+  color: black;
+  height: 50vh;
+  // font-family: 'Indie Flower', cursive;
+  // font-family: 'Architects Daughter', cursive;
+  font-family: 'Annie Use Your Telescope', cursive;
+}
 
+.home__hustle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3.5vw;
+  // text-transform: uppercase;
+  color: black;
+  font-family: 'Heebo', sans-serif;
 }

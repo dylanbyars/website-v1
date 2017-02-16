@@ -13,17 +13,15 @@
   min-width: 100vw;
   height: 145px;
   display: flex;
-  flex-direction: column;
-  border: solid;
-  background-color: red;
+  justify-content: center;
+  align-items: center;
 }
 
 .footer__social-media {
   display: flex;
-  width: 65%;
+  width: 100%;
   justify-content: space-around;
   align-items: center;
-  border: solid;
 }
 
 .footer__social-item {
@@ -43,5 +41,13 @@
 }
 
 .copyright {
+
+}
+
+@media screen and (min-width: 760px) {
+
+  .footer__social-media {
+    width: 45%;
+  }
 
 }

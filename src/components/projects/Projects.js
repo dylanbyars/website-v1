@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { ProjectsHeader } from './components/ProjectsHeader';
 import { ProjectPreview } from './components/ProjectPreview';
 import PeriodicTable from './components/periodic-table-app/PeriodicTable';
 import WeatherApp from './components/weather-app/WeatherApp';
@@ -8,6 +9,8 @@ class Projects extends Component {
     render() {
         return (
             <div className="container__projects">
+
+                <ProjectsHeader />
                 
                 <div className="projects__intro">
                     <div className="projects__title">Take a look at some of these projects</div>

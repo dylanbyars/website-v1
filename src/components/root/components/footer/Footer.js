@@ -27,7 +27,7 @@ export const Footer = () => {
                 </div>
 
                 <div className="footer__social-item">
-                    <a href="mailto:dylan@dylanbyars.com?subject=Hi, Dylan!&body=Can you ubild me a website?">
+                    <a href="mailto:dylan@dylanbyars.com">
 <img className="footer__social-img" src={emailIcon} alt="Holler" /></a>
                 </div>
 

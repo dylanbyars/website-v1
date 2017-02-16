@@ -1,5 +1,5 @@
 import React from 'react';
-import { Header } from './components/header/Header';
+import ToggleableNav from './components/ToggleableNav';
 import { Footer } from './components/footer/Footer';
 
 export const Root = ({ children }) => {
@@ -7,7 +7,7 @@ export const Root = ({ children }) => {
     return (
         <div className="container__root">
             
-            <Header />
+            <ToggleableNav />
             
             <div className="root__content">
                 {children}

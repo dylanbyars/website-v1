@@ -46,7 +46,7 @@ class SkillChart extends Component {
   }
 
   setSkillBars() {
-    let delay = 0
+    let delay = .4
     const skillBars = this.state.skills.map(skill => {
       let tech = Object.keys(skill)[0]
       let prow = skill[tech]

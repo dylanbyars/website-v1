@@ -6,16 +6,10 @@ $transition-duration: 0.5s;
 $transition-delay: 0.1s;
 $color--red: #EC7263;
 
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
-}
-
-.nav-toggle {
+.toggleable-nav {
   position: fixed;
   top: 0;
-  left: 0;
+  right: 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -65,17 +59,17 @@ $color--red: #EC7263;
   }
 }
 
-.nav__items {
+.nav__items--mini {
   // Don't want pointer-events as menu is closed... but why?
   pointer-events: none;
   transition: $transition-duration;
 }
 
 // Showing nav items as lines, making up the menu icon
-.nav__item {
+.nav__item--mini {
   position: relative;
   display: inline-block;
-  float: left;
+  float: right;
   clear: both;
   color: transparent;
   font-size: 14px;
@@ -145,14 +139,14 @@ $color--red: #EC7263;
   }
 
   // Open nav
-  & > .nav__items {
+  & > .nav__items--mini {
     pointer-events: auto;
     // change this depending on the screen size. !! MEDIA QUERY STUFF LATER
-    transform: translate(62.5px, 135px);
+    transform: translate(-62.5px, 135px);
     z-index: 9999;
 
     // Restoring nav items from lines in the menu icon
-    .nav__item {
+    .nav__item--mini {
       color: $color--red;
       letter-spacing: 0;
       font-size: 19px;

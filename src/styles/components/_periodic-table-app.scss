@@ -1,14 +1,8 @@
 /* Periodic Table App Styles */
 
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
-}
-
 // Sizing Variables
 
-$height-min: 500px;
+$pt-height-min: 500px;
 $width-max--modal: 450px;
 
 // Color Palette
@@ -27,13 +21,12 @@ $color-noble-gas: #0E94FF;
 $color-lanthanoid: #FF006A;
 $color-actinoid: #FF00C6;
 $color-group-unconfirmed: #BADA55;
-$color-my-site: #507DBC;
 $color-modal-background: #FEFCFD;
 $color-modal-close-btn: #ED474A;
 
-.container__periodic-table {
+.periodic-table-app {
   height: 110vh;
-  min-height: $height-min;
+  min-height: $pt-height-min;
   height:100vh;
   display: flex;
   justify-content: center;
@@ -53,7 +46,7 @@ $color-modal-close-btn: #ED474A;
 
 /* Styles for the modal */
 
-.backdrop {
+.pt-backdrop {
   position: absolute;
   top: 13vh;
   left: 0px;
@@ -63,7 +56,7 @@ $color-modal-close-btn: #ED474A;
   background: rgba(0, 0, 0, 0.3);
 }
 
-.modal {
+.pt-modal {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -81,7 +74,7 @@ $color-modal-close-btn: #ED474A;
   max-height: 85vh;
 }
 
-.modal__close-btn {
+.pt-modal__close-btn {
   position: absolute;
   top: 5px;
   right: 5px;
@@ -89,11 +82,11 @@ $color-modal-close-btn: #ED474A;
   width: 21px;
 }
 
-.modal__close-btn:hover {
+.pt-modal__close-btn:hover {
   cursor: pointer;
 }
 
-.modal-header {
+.pt-modal-header {
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -168,7 +161,7 @@ $color-modal-close-btn: #ED474A;
   padding: 2vw;
 }
 
-.header {
+.pt-header {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -176,12 +169,12 @@ $color-modal-close-btn: #ED474A;
   margin-bottom: 8vh;
 }
 
-.title {
+.pt-title {
   font-size: 6vw;
   font-weight: 600;
 }
 
-.subtitle {
+.pt-subtitle {
   font-size: 4vw;
   margin-top: 1vh;
 }
@@ -206,7 +199,7 @@ $color-modal-close-btn: #ED474A;
   justify-content: space-around;
 }
 
-.element {
+.pt-element {
   display: flex;
   justify-content: center;
   position: relative;
@@ -217,7 +210,7 @@ $color-modal-close-btn: #ED474A;
   border: 0.5px solid $color-border;
 }
 
-.element:hover {
+.pt-element:hover {
   cursor: pointer;
 }
 
@@ -282,7 +275,7 @@ $color-modal-close-btn: #ED474A;
   
 }
 
-.number {
+.pt-number {
   position: absolute;
   top: 8%;
   right: 8%;
@@ -290,7 +283,7 @@ $color-modal-close-btn: #ED474A;
   transition: inherit;
 }
 
-.symbol {
+.pt-symbol {
   position: absolute;
   bottom: 8%;
   left: 8%;
@@ -299,20 +292,20 @@ $color-modal-close-btn: #ED474A;
 }
 
 @media (min-width: 900px) {
-  .element {
+  .pt-element {
     height: 45px;
     width: 45px;
   }
 
-  .number {
+  .pt-number {
     font-size: 13px;
   }
 
-  .symbol {
+  .pt-symbol {
     font-size: 16px;
   }
 
-  .modal {
+  .pt-modal {
     max-width: 450px;
   }
 }

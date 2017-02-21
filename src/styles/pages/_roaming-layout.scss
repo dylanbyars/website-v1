@@ -1,14 +1,6 @@
 /* Root Element Styles */
 
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-.container__root {
+.root {
   position: relative;
   width: 100vw;
   min-height: 100vh;

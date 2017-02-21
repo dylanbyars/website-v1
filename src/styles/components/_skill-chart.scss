@@ -1,11 +1,5 @@
 /* Skill Chart Styles */
 
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
-}
-
 /* variables */
 
 $width-full: 80vw;
@@ -20,7 +14,7 @@ $color-cozy: #B8E1FF;
 $color-virtuoso: #BAFF29;
 
 
-.container__skill-chart {
+.skill-chart {
   width: 100%;
   height: 100vh;
   padding-bottom: 15vh;

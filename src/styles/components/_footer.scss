@@ -1,12 +1,6 @@
 /* Footer Element Styles */
 
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
-}
-
-.container__footer {
+.footer {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -19,7 +13,7 @@
 
 .footer__social-media {
   display: flex;
-  width: 100%;
+  width: 80%;
   justify-content: space-around;
   align-items: center;
 }

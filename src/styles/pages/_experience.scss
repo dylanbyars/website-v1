@@ -1,21 +1,13 @@
 /* Experience Styles */
 
-/* Color Palette */
-
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
-}
-
-.container__experience {
+.experience {
   display: flex;
   flex-direction: column;
   width: 100vw;
 }
 
-.experience__intro {
-
+.experience__content {
+  
 }
 
 .experience__skill-chart {

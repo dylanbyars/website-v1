@@ -1,0 +1,29 @@
+$color--cell-active: #7EC4CF;
+$color--cell-inactive: #F92A82;
+
+.generations {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.generation {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.generation > span {
+  display: inline-block;
+  height: 4px;
+  width: 4px;
+}
+
+.generation > .active {
+  background-color: $color--cell-active; 
+}
+
+.generation > .inactive {
+  background-color: $color--cell-inactive;
+}

@@ -1,0 +1,44 @@
+/* Styles for the FullNav component */
+
+.full-nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100vw;
+  height: 55px;
+//   margin: 25px;
+  z-index: 9999;
+  border: solid;
+  background: transparent;
+}
+
+.full-nav__home {
+    width: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home__link {
+    text-decoration: none;
+    color: black;
+}
+
+.full-nav__links {
+    width: 45%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.nav__item--maxi {
+    text-decoration: none;
+    color: black;
+}
+
+.active-link--maxi {
+    border-bottom: 1px solid black;
+}

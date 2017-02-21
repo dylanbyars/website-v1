@@ -30,12 +30,12 @@ export const Element = ({
     }
   }
 
-  let styles = classNames('element', groupStyle(group), stateStyle(state))
+  let styles = classNames('pt-element', groupStyle(group), stateStyle(state))
 
   return (
     <div className={styles} onClick={() => setModalElement(name, wiki, symbol, mass, number, state, group)}>
-      <div className="symbol">{symbol}</div>
-      <div className="number">{number}</div>
+      <div className="pt-symbol">{symbol}</div>
+      <div className="pt-number">{number}</div>
     </div>
   )
 }

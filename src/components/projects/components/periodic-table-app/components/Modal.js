@@ -93,15 +93,15 @@ class Modal extends Component {
     } else {
       return (
         <div>
-          <div className="modal">
-            <div className="modal__close-btn" onClick={e => this.close(e)}>
+          <div className="pt-modal">
+            <div className="pt-modal__close-btn" onClick={e => this.close(e)}>
               <img src="https://image.flaticon.com/icons/svg/148/148766.svg" alt="close button"/>
             </div>
             <ModalHeader title={this.props.element} image={this.state.wikiImage} />
             <ModalDetail symbol={this.props.symbol} mass={this.props.mass} number={this.props.number} state={this.props.state} group={this.props.group} />
             <ModalContent summary={this.state.wikiSummary} link={this.props.wiki} /> 
           </div>
-          <div className="backdrop" onClick={e => this.close(e)}></div>
+          <div className="pt-backdrop" onClick={e => this.close(e)}></div>
         </div>
       )
     }

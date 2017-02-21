@@ -44,7 +44,7 @@ class WeatherApp extends Component {
 
   render() {
     return (
-      <div className="container__weather-app">
+      <div className="weather-app">
         <SearchInput launchSearch={this.launchSearch} />
         { this.state.active && <WeatherDisplay data={this.state} /> }
       </div>

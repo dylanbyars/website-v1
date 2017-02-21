@@ -5,7 +5,7 @@ import Modal from './components/Modal';
 import { Header } from './components/Header';
 import { Group } from './components/Group';
 
-class PeriodicTable extends Component {
+class PeriodicTableApp extends Component {
   constructor(props) {
     super(props)
 
@@ -185,7 +185,7 @@ class PeriodicTable extends Component {
       )
     } else {
       return (
-        <div className="container__periodic-table">
+        <div className="periodic-table-app">
           <div className="periodic-table">
 
             {this.state.modalOpen && <Modal onClose={this.closeModal} element={this.state.activeElement} wiki={this.state.activeElementWiki} symbol={this.state.activeElementSymbol} mass={this.state.activeElementMass} number={this.state.activeElementNumber} state={this.state.activeElementState} group={this.state.activeElementGroup} />}
@@ -222,4 +222,4 @@ class PeriodicTable extends Component {
   }
 }
 
-export default PeriodicTable;
+export default PeriodicTableApp;

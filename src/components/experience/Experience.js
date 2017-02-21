@@ -20,14 +20,9 @@ export const Experience = () => {
     })
 
     return (
-        <div className="container__experience">
-            <div className="experience__intro">
+        <div className="experience">
 
-            </div>
-
-            <div className="experience__header">
-                <ExperienceHeader />
-            </div>
+            <ExperienceHeader />
 
             <div className="experience__content">
 

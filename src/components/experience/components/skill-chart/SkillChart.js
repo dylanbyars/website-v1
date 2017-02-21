@@ -62,7 +62,7 @@ class SkillChart extends Component {
 
   render() {
     return (
-      <div className="container__skill-chart">
+      <div className="skill-chart">
         <div className="skill-chart__header">Skills</div>
         <div className="skill-chart__widget">{this.setSkillBars()}</div>
         <Key />

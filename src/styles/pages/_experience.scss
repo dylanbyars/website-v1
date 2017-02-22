@@ -1,17 +1,25 @@
 /* Experience Styles */
 
 .experience {
-  display: flex;
-  flex-direction: column;
-  width: 100vw;
+
 }
 
-.experience__content {
-  
+.experience__sub-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Heebo', sans-serif;
+  font-size: 13vw;
+  margin: 5vh 0;
 }
 
 .experience__skill-chart {
-  width: 100%;
+
+}
+
+.experience__resume {
+  display: flex;
+  flex-direction: column;
 }
 
 .experience__sections {
@@ -26,7 +34,9 @@
 }
 
 .experience__category {
+  margin-right: 5vw;
   font-size: 5.5vh;
+  align-self: flex-end;
 }
 
 .experience__gigs {

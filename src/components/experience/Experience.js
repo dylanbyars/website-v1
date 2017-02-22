@@ -1,12 +1,11 @@
 import React from 'react';
-import { ExperienceHeader } from './components/ExperienceHeader';
 import { resume } from './resume';
 import { Gig } from './components/Gig';
 import SkillChart from './components/skill-chart/SkillChart';
 
 export const Experience = () => {
 
-    const sections = resume.map(section => {
+    const experienceSections = resume.map(section => {
 
         const gigs = section.gigs.map(
             ({ title, company, description }) => <Gig title={title} company={company} description={description} />)
@@ -20,18 +19,20 @@ export const Experience = () => {
     })
 
     return (
-        <div className="experience">
+        <div className="experience page">
 
-            <ExperienceHeader />
+            <div className="page__header">
+                <div className="page__title">Experience</div>
+            </div>
 
-            <div className="experience__content">
+            <div className="experience__skill-chart">
+                <div className="experience__sub-header">Skills</div>
+                <SkillChart />
+            </div>
 
-                <div className="content__skill-chart">
-                    <SkillChart />
-                </div>
-
-                <div className="content__sections">{sections}</div>
-            
+            <div className="experience__resume">
+                <div className="experience__sub-header">Resume</div>
+                <div className="experience__sections">{experienceSections}</div>
             </div>
             
         </div>

@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import ReactTransitionGroup from 'react-addons-transition-group';
-import SkillBar from './components/SkillBar';
-import { Key } from './components/Key';
+import SkillBar from './SkillBar';
 
 class SkillChart extends Component {
   constructor(props) {
@@ -63,9 +62,14 @@ class SkillChart extends Component {
   render() {
     return (
       <div className="skill-chart">
-        <div className="skill-chart__header">Skills</div>
         <div className="skill-chart__widget">{this.setSkillBars()}</div>
-        <Key />
+        <div className="skill-chart__key">
+          <div className="key__virtuoso">Virtuoso</div>
+          <div className="key__cozy">Cozy</div>
+          <div className="key__learning">Learning to Love</div>
+          <div className="key__fiddled">Fiddled With</div>
+          <div className="key__read">Read the Docs</div>
+        </div>
       </div>
     )
   }

@@ -1,0 +1,23 @@
+// Shame styles
+
+.page {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+}
+
+.page__header {
+  height: 35vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.page__title {
+    height: 45vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Annie Use Your Telescope', cursive;
+    font-size: 18vw;
+}

@@ -9,25 +9,33 @@ class Home extends Component {
         return (
             <div className="home">
 
-            <div className="home__background">
-                <CellularAutomaton />
-            </div>
+                <div className="home__background">
+                    <CellularAutomaton />
+                </div>
 
-            <div className="home__title">
-                <div className="home__db">Dylan Byars</div>
-                <div className="home__hustle">frontend web developer</div>
-            </div>
+                <div className="home__foreground">
 
-            <div className="home__blurb">
-                <p>My name's Dylan and you should hire me</p>
-                <p>Now please</p>
-            </div>
+                    <div className="home__navigation">
 
-            <div className="home__navigation">
-                <Link className="" activeClassName="" to="/experience">Experience</Link>
-                <Link className="" activeClassName="" to="/projects">Projects</Link>
-                <Link className="" activeClassName="" to="/about">About</Link>
-            </div>
+                        <div className="home__nav-item">
+                            <Link className="home__nav-link" activeClassName="home__nav-link--active" to="experience">Experience</Link>
+                        </div>
+
+                        <div className="home__nav-item">
+                            <Link className="home__nav-link" activeClassName="home__nav-link--active" to="/projects">Projects</Link>
+                        </div>
+
+                        <div className="home__nav-item">
+                            <Link className="home__nav-link" activeClassName="home__nav-link--active" to="/about">About</Link>
+                        </div>
+
+                    </div>
+
+                    <div className="home__db">Dylan Byars</div>
+
+                    <div className="home__hustle">frontend web developer</div>
+
+                </div>
 
             </div>
         )

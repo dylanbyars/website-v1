@@ -9,21 +9,21 @@ $color--cell-inactive: #F92A82;
 }
 
 .generation {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+  display: flex;
 }
 
 .generation > span {
   display: inline-block;
-  height: 4px;
-  width: 4px;
+  height: 20px;
+  width: 20px;
+  padding: 1px;
+  border-radius: 50%;
 }
 
-.generation > .active {
+.active {
   background-color: $color--cell-active; 
 }
 
-.generation > .inactive {
+.inactive {
   background-color: $color--cell-inactive;
 }

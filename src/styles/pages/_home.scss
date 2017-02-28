@@ -1,70 +1,20 @@
-/* Home Element Styles */
-
-// Font for my name in the header
-// @import url('https://fonts.googleapis.com/css?family=Annie+Use+Your+Telescope|Architects+Daughter|Indie+Flower');
-
-// Font for the sub heading
-// @import url('https://fonts.googleapis.com/css?family=Heebo:100');
+/* Home element styles */
 
 .home {
-    height: 100vh;
-    width: 100vw;
-    position: relative;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-direction: column;
-}
-
-.home__background {
-  position: absolute;
-  left: 0;
-  top: 0;
-  min-height: 100vh;
-  z-index: -99999;
+  height: 100vh;
+  width: 100vw;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-around;
   align-items: center;
-  overflow: hidden;
-
-  // &:before {
-  //   content: '';
-  //   position: absolute;
-  //   top: 0;
-  //   right: 0;
-  //   bottom: 0;
-  //   left: 0;
-  //   background-image: linear-gradient(to top right, black, white);
-  //   opacity: .5; 
-  // }
-
-}
-
-.home__foreground {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-direction: column;
-    height: 80%;
 }
 
 .home__navigation {
-    background-color: white;
-    display: flex;
-    width: 90vw;
-    justify-content: space-around;
-    align-items: center;
-    padding: 3vw 1vw;
-    border: solid;
-    border-radius: 10px;
-}
-
-.home__nav-item {
-    // background-color: white;
-    // display: flex;
-    // padding: 1vw 2vw;
-    // justify-content: center;
-    // align-items: center;
+  display: flex;
+  width: 90vw;
+  justify-content: space-around;
+  align-items: center;
+  padding: 3vw 1vw;
 }
 
 .home__nav-link {
@@ -72,6 +22,21 @@
   font-family: 'Heebo', sans-serif;
   text-decoration: none;
   font-size: 4.5vw;
+  letter-spacing: 0.75vw;
+}
+
+.home__nav-link:after {
+  content: "";
+  display: block;
+  margin: auto;
+  height: 3px;
+  width: 0%;
+  transition: .4s ease-in-out;
+}
+
+.home__nav-link:hover:after {
+  width: 100%;
+  background-color: black;
 }
 
 .home__db {
@@ -82,10 +47,6 @@
   font-size: 18vw;
   color: black;
   padding: 3vw;
-  border: solid;
-  border-radius: 10px;
-  // font-family: 'Indie Flower', cursive;
-  // font-family: 'Architects Daughter', cursive;
   font-family: 'Annie Use Your Telescope', cursive;
 }
 
@@ -97,15 +58,13 @@
   font-size: 5.5vw;
   color: black;
   padding: 1vw 2vw;
-  border: solid;
-  border-radius: 10px;
   font-family: 'Heebo', sans-serif;
 }
 
 @media screen and (min-width: 760px) {
 
-  .home__foreground {
-    height: 100%;
+  .home {
+
   }
 
   .home__db {
@@ -122,21 +81,7 @@
 
   .home__nav-link {
     font-size: 2.5vw;
-  }
-
-  .home__nav-link:after {
-    content: "";
-    display: block;
-    margin: auto;
-    height: 3px;
-    width: 0%;
-    transition: .4s ease-in-out;
-  }
-
-  .home__nav-link:hover:after {
-    width: 100%;
-    background-color: black;
-    // border-radius: 50%;
+    letter-spacing: 0.15vw;
   }
 
 }

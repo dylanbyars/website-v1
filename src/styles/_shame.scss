@@ -7,17 +7,38 @@
 }
 
 .page__header {
-  height: 35vh;
+  height: 25vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .page__title {
-    height: 45vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: 'Annie Use Your Telescope', cursive;
-    font-size: 18vw;
+    // font-family: 'NTR', sans-serif;
+    // font-family: 'Rajdhani', sans-serif;
+    font-family: 'Nunito', sans-serif;
+    // font-family: 'Press Start 2P', cursive;
+    font-size: 11vw;
+    letter-spacing: 2px;
+}
+
+.page__blurb {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 80vw;
+}
+
+@media screen and (min-width: 760px) {
+  .page__title {
+    font-size: 75px;
+  }
+
+  .page__blurb {
+    max-width: 550px;
+  }
 }

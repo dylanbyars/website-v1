@@ -1,0 +1,34 @@
+/* About Element Styles */
+
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about__blurb {
+  width: 85%;
+}
+
+.about__img {
+  float: left;
+  width: 45%;
+  margin-right: 15px;
+  margin-bottom: 5px;
+  border-radius: 50%;
+}
+
+.about__blogs {
+  width: 85%;
+}
+
+@media screen and (min-width: 760px) {
+  .about__blurb,
+  .about__blogs {
+    width: 550px;
+  }
+
+  .about__img {
+    width: 30%;
+  }
+}

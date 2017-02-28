@@ -1,7 +1,9 @@
-/* Experience Styles */
+/* Experience Element Styles */
 
 .experience {
-
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .experience__sub-header {
@@ -14,54 +16,13 @@
 }
 
 .experience__skill-chart {
-
+  height: 85vh;
 }
 
 .experience__resume {
-  display: flex;
-  flex-direction: column;
-}
-
-.experience__sections {
 
 }
 
-.experience__section {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: space-around;
-}
-
-.experience__category {
-  margin-right: 5vw;
-  font-size: 5.5vh;
-  align-self: flex-end;
-}
-
-.experience__gigs {
-  display: flex;
-  flex-direction: column;
-  align-items: space-between;
-  padding: 6vh 0;
-}
-
-.gig {
-
-}
-
-.gig__title {
-  font-size: 3.5vh;
-}
-
-.gig__company {
-  font-size: 2.5vh;
-}
-
-.gig__descriptions {
-
-}
-
-.gig__description {
-
+.experience__volunteer {
+  
 }

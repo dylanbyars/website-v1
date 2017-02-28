@@ -5,9 +5,10 @@
   bottom: 0;
   left: 0;
   min-width: 100vw;
-  height: 145px;
+  height: 115px;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -30,8 +31,21 @@
   height: 45px;
 }
 
-.footer__bottom {
+.mail-icon {
+  padding: 5px;
+  border: 3.75px solid black;
+  border-radius: 50%;
+}
+
+.footer__thanks {
+
+  margin-bottom: 25px;
   
+  & a {
+    text-decoration: none;
+    color: green;
+  }
+
 }
 
 .copyright {

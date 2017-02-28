@@ -1,22 +1,19 @@
 /* Styles for the FullNav component */
 
 .full-nav {
-  position: absolute;
+  position: relative;
   top: 0;
   left: 0;
   display: flex;
   justify-content: space-around;
   align-items: center;
   width: 100vw;
-  height: 55px;
-//   margin: 25px;
+  height: 11vh;
   z-index: 9999;
-  border: solid;
   background: transparent;
 }
 
 .full-nav__home {
-    width: 15%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -25,7 +22,16 @@
 .home__link {
     text-decoration: none;
     color: black;
+    font-size: 3.5vw;
     font-family: 'Annie Use Your Telescope', cursive;
+    padding: 9px;
+    border-radius: 3px;
+    transition: 300ms;
+}
+
+.home__link:hover {
+    background-color: black;
+    color: white;
 }
 
 .full-nav__links {
@@ -38,9 +44,30 @@
 
 .nav__item--maxi {
     text-decoration: none;
+    padding: 9px;
+    letter-spacing: .09em;
     color: black;
+    border-radius: 3px;
+    transition: 300ms;
+}
+
+.nav__item--maxi:hover {
+    background-color: black;
+    color: white;
 }
 
 .active-link--maxi {
+    border-radius: 0;
     border-bottom: 1px solid black;
+}
+
+.active-link--maxi:hover {
+    background-color: white;
+    color: black;
+}
+
+@media screen and (min-width: 760px) {
+    .home__link {
+        font-size: 30px;
+    }
 }

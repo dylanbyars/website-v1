@@ -129,7 +129,7 @@ class CellularAutomaton extends Component {
   componentWillMount() {
     
     // make rows with enough cells to fill the window's width
-    const cellCount = Math.floor(window.innerWidth / 20)
+    const cellCount = Math.floor(window.innerWidth / 17)
 
     // initialize an array to hold all of the generations
     let generations = []
@@ -152,7 +152,7 @@ class CellularAutomaton extends Component {
     generations.push(initialCellStates)
     
     // On initial render, build a page's-worth of rows
-    let rows = Math.floor(window.innerHeight / 20)
+    let rows = Math.floor(window.innerHeight / 17)
     
     for (let i = 0; i < rows; i++) {
       generations.push(this.nextGeneration(generations[i]))

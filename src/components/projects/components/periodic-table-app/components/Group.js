@@ -1,11 +1,7 @@
 import React from 'react';
-
 import { Element } from './Element';
 
-export const Group = ({
-  elements,
-  setModalElement
-}) => {
+export const Group = ({ elements, setModalElement }) => {
 
   const group = elements.map(({
     mass,
@@ -16,9 +12,9 @@ export const Group = ({
     symbol,
     yearDiscovered,
     wiki
-  }) => {
+  }, index) => {
 
-    return <Element key={number} mass={mass} number={number} group={group} name={name} state={state} symbol={symbol} yearDiscovered={yearDiscovered} wiki={wiki} setModalElement={setModalElement} />
+    return <Element key={`${name}-${index}`} mass={mass} number={number} group={group} name={name} state={state} symbol={symbol} yearDiscovered={yearDiscovered} wiki={wiki} setModalElement={setModalElement} />
 
   })
 

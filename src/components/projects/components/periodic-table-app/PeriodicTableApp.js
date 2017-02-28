@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import Spinner from 'react-spinkit';
 import Modal from './components/Modal';
 import { Header } from './components/Header';
 import { Group } from './components/Group';
@@ -14,34 +13,10 @@ class PeriodicTableApp extends Component {
       // null to start
       elements: null,
       // this is where the elements broken into groups will be stored
-      group1: null,
-      group2: null,
-      group3: null,
-      group4: null,
-      group5: null,
-      group6: null,
-      group7: null,
-      group8: null,
-      group9: null,
-      group10: null,
-      group11: null,
-      group12: null,
-      group13: null,
-      group14: null,
-      group15: null,
-      group16: null,
-      group17: null,
-      group18: null,
-      lanthanoids: null,
-      actinoids: null,
+      mainGroups: null,
+      fBlockGroups: null,
       // the active element, if one's selected by the user. Null to start.
-      activeElement: null,
-      activeElementWiki: null,
-      activeElementSymbol: null,
-      activeElementMass: null,
-      activeElementNumber: null,
-      activeElementState: null,
-      activeElementGroup: null,
+      activeElementInfo: null,
       // boolean to determine if the modal is/should be open or not. False to start
       modalOpen: false
     }
@@ -129,42 +104,54 @@ class PeriodicTableApp extends Component {
       }
 
       this.setState({
-        group1: getGroupElements(groups[0]),
-        group2: getGroupElements(groups[1]),
-        group3: [...getGroupElements(groups[2]), fillerElement, fillerElement],
-        group4: getGroupElements(groups[3]),
-        group5: getGroupElements(groups[4]),
-        group6: getGroupElements(groups[5]),
-        group7: getGroupElements(groups[6]),
-        group8: getGroupElements(groups[7]),
-        group9: getGroupElements(groups[8]),
-        group10: getGroupElements(groups[9]),
-        group11: getGroupElements(groups[10]),
-        group12: getGroupElements(groups[11]),
-        group13: getGroupElements(groups[12]),
-        group14: getGroupElements(groups[13]),
-        group15: getGroupElements(groups[14]),
-        group16: getGroupElements(groups[15]),
-        group17: getGroupElements(groups[16]),
-        group18: getGroupElements(groups[17]),
-        lanthanoids: getGroupElements(fBlock[0]),
-        actinoids: getGroupElements(fBlock[1])
+        mainGroups: [
+          getGroupElements(groups[0]), 
+          getGroupElements(groups[1]),
+          [...getGroupElements(groups[2]), fillerElement, fillerElement],
+          getGroupElements(groups[3]),
+          getGroupElements(groups[4]),
+          getGroupElements(groups[5]),
+          getGroupElements(groups[6]),
+          getGroupElements(groups[7]),
+          getGroupElements(groups[8]),
+          getGroupElements(groups[9]),
+          getGroupElements(groups[10]),
+          getGroupElements(groups[11]),
+          getGroupElements(groups[12]),
+          getGroupElements(groups[13]),
+          getGroupElements(groups[14]),
+          getGroupElements(groups[15]),
+          getGroupElements(groups[16]),
+          getGroupElements(groups[17])
+        ],
+        fBlockGroups: [
+          getGroupElements(fBlock[0]),
+          getGroupElements(fBlock[1])
+        ]
       })
 
     })
   }
 
   setModalElement(element, wiki, symbol, mass, number, state, group) {
+    // this.setState({
+    //   activeElementInfo: {
+    //     activeElement: element,
+    //     activeElementWiki: wiki,
+    //     activeElementSymbol: symbol,
+    //     activeElementMass: mass,
+    //     activeElementNumber: number,
+    //     activeElementState: state,
+    //     activeElementGroup: group,
+    //   },
+    //   modalOpen: true
+    // })
+
     this.setState({
-      activeElement: element,
-      activeElementWiki: wiki,
-      activeElementSymbol: symbol,
-      activeElementMass: mass,
-      activeElementNumber: number,
-      activeElementState: state,
-      activeElementGroup: group,
+      activeElementInfo: { element, wiki, symbol, mass, number, state, group },
       modalOpen: true
     })
+
   }
 
   closeModal() {
@@ -175,46 +162,36 @@ class PeriodicTableApp extends Component {
 
   render() {
 
-    if (!this.state.group1) {
+    if (!this.state.mainGroups) {
       return (
-        <div className="container__periodic-table">
-          <div className="spinner">
-            <Spinner spinnerName="wandering-cubes" />
+        <div className="periodic-table-app">
+          <div className="wandering-cubes">
+            <div className="cube1" />
+            <div className="cube2" />
           </div>
         </div>
       )
     } else {
+
+      const mainGroups = this.state.mainGroups.map(group => {
+        return <Group key={group[0].mass} elements={group} setModalElement={this.setModalElement} />
+      })
+
+      const fBlockGroups = this.state.fBlockGroups.map(group => {
+        return <Group key={group[0].mass} elements={group} setModalElement={this.setModalElement} />
+      })
+
       return (
         <div className="periodic-table-app">
           <div className="periodic-table">
 
-            {this.state.modalOpen && <Modal onClose={this.closeModal} element={this.state.activeElement} wiki={this.state.activeElementWiki} symbol={this.state.activeElementSymbol} mass={this.state.activeElementMass} number={this.state.activeElementNumber} state={this.state.activeElementState} group={this.state.activeElementGroup} />}
+            {this.state.modalOpen && <Modal onClose={this.closeModal} elementInfo={this.state.activeElementInfo} />}
             
             <Header />
-            <div className="main-block">
-              <Group elements={this.state.group1} setModalElement={this.setModalElement} />
-              <Group elements={this.state.group2} setModalElement={this.setModalElement} />
-              <Group elements={this.state.group3} setModalElement={this.setModalElement} />
-              <Group elements={this.state.group4} setModalElement={this.setModalElement} />
-              <Group elements={this.state.group5} setModalElement={this.setModalElement} />
-              <Group elements={this.state.group6} setModalElement={this.setModalElement} />
-              <Group elements={this.state.group7} setModalElement={this.setModalElement} />
-              <Group elements={this.state.group8} setModalElement={this.setModalElement} />
-              <Group elements={this.state.group9} setModalElement={this.setModalElement} />
-              <Group elements={this.state.group10} setModalElement={this.setModalElement} />
-              <Group elements={this.state.group11} setModalElement={this.setModalElement} />
-              <Group elements={this.state.group12} setModalElement={this.setModalElement} />
-              <Group elements={this.state.group13} setModalElement={this.setModalElement} />
-              <Group elements={this.state.group14} setModalElement={this.setModalElement} />
-              <Group elements={this.state.group15} setModalElement={this.setModalElement} />
-              <Group elements={this.state.group16} setModalElement={this.setModalElement} />
-              <Group elements={this.state.group17} setModalElement={this.setModalElement} />
-              <Group elements={this.state.group18} setModalElement={this.setModalElement} />
-            </div>
-            <div className="f-block">
-              <Group elements={this.state.lanthanoids} setModalElement={this.setModalElement} />
-              <Group elements={this.state.actinoids} setModalElement={this.setModalElement} />
-            </div>
+
+            <div className="main-block">{mainGroups}</div>
+            <div className="f-block">{fBlockGroups}</div>
+
           </div>
         </div>
       )

@@ -27,7 +27,7 @@ class Modal extends Component {
 
     // pull the last bit of the wiki url off 
     let regex = /wiki\/(.*)/g
-    let url = this.props.wiki
+    let url = this.props.elementInfo.wiki
     let wikiTitle = regex.exec(url)[1]
 
     // build the url to send the request to
@@ -88,18 +88,20 @@ class Modal extends Component {
   }
 
   render() {
-    if (this.props.element === "fillerElement") {
+
+    const { element, symbol, mass, number, state, group, wiki } = this.props.elementInfo
+
+    if (element === "fillerElement") {
       return null
     } else {
+
       return (
         <div>
           <div className="pt-modal">
-            <div className="pt-modal__close-btn" onClick={e => this.close(e)}>
-              <img src="https://image.flaticon.com/icons/svg/148/148766.svg" alt="close button"/>
-            </div>
-            <ModalHeader title={this.props.element} image={this.state.wikiImage} />
-            <ModalDetail symbol={this.props.symbol} mass={this.props.mass} number={this.props.number} state={this.props.state} group={this.props.group} />
-            <ModalContent summary={this.state.wikiSummary} link={this.props.wiki} /> 
+            <div className="pt-modal__close-btn" onClick={e => this.close(e)} />
+            <ModalHeader title={element} image={this.state.wikiImage} />
+            <ModalDetail symbol={symbol} mass={mass} number={number} state={state} group={group} />
+            <ModalContent summary={this.state.wikiSummary} link={wiki} /> 
           </div>
           <div className="pt-backdrop" onClick={e => this.close(e)}></div>
         </div>

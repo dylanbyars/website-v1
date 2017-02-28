@@ -1,12 +1,6 @@
 import React from 'react';
 
-export const ModalDetail = ({
-  symbol,
-  mass,
-  number,
-  state,
-  group
-}) => {
+export const ModalDetail = ({ symbol, mass, number, state, group }) => {
 
   const setGroupWiki = (group) => {
     switch (group) {
@@ -41,7 +35,7 @@ export const ModalDetail = ({
         return 'https://en.wikipedia.org/wiki/Actinide'
         break
       default:
-        return null
+        return '???'
     }
   }
 
@@ -69,7 +63,7 @@ export const ModalDetail = ({
       </div>
       <div className="modal-detail modal-details__state">
         <div className="modal-detail__label">State:</div>
-        <div className="modal-detail__value">{state}</div>
+        <div className="modal-detail__value">{state || '???'}</div>
       </div>
     </div>
   )

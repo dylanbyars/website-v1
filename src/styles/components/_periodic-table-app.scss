@@ -25,9 +25,9 @@ $color-modal-background: #FEFCFD;
 $color-modal-close-btn: #ED474A;
 
 .periodic-table-app {
-  height: 110vh;
   min-height: $pt-height-min;
   height:100vh;
+  width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -39,118 +39,46 @@ $color-modal-close-btn: #ED474A;
 /* styling for the wandering cubes spinner element */
 
 .wandering-cubes {
-  width: 27px;
-  height: 27px;
+  min-width: 130px;
+  min-height: 130px;
   position: relative;
 }
 
-/* Styles for the modal */
-
-.pt-backdrop {
+.cube1,
+.cube2 {
+  background-color: #333;
+  width: 10px;
+  height: 10px;
   position: absolute;
-  top: 13vh;
-  left: 0px;
-  width: 100%;
-  height: 110%;
-  z-index: 9998;
-  background: rgba(0, 0, 0, 0.3);
+  top: 0;
+  left: 0;
+  animation: cubemove 1.8s infinite ease-in-out;
 }
 
-.pt-modal {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, calc(-50% + 13vh));
-  z-index: 9999;
-  background: $color-modal-background;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 15px 10px;
-  border-radius: 4px;
-  min-width: 320px;
-  width: 45vw;
-  max-width: $width-max--modal;
-  max-height: 85vh;
+.cube2 {
+  animation-delay: -0.9s;
 }
 
-.pt-modal__close-btn {
-  position: absolute;
-  top: 5px;
-  right: 5px;
-  height: 21px;
-  width: 21px;
+@keyframes cubemove {
+  25% {
+    transform: translateX(42px) rotate(-90deg) scale(0.5);
+  }
+  50% {
+    /* Hack to make FF rotate in the right direction */
+    transform: translateX(42px) translateY(42px) rotate(-179deg);
+  }
+  50.1% {
+    transform: translateX(42px) translateY(42px) rotate(-180deg);
+  }
+  75% {
+    transform: translateX(0px) translateY(42px) rotate(-270deg) scale(0.5);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
 }
 
-.pt-modal__close-btn:hover {
-  cursor: pointer;
-}
-
-.pt-modal-header {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding: 15px 0 15px;
-}
-
-.modal-header__title {
-  font-size: 26px;
-}
-
-.modal-header__image {
-  max-width: 20vw;
-}
-
-.modal-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-  padding: 0 20px;
-}
-
-.modal-content__summary {
-  font-size: 15px;
-}
-
-.modal-content__wiki-link {
-  padding: 10px 0 5px;
-  text-decoration: none;
-  transition: 100ms ease-out;
-}
-
-.modal-content__wiki-link:hover,
-.detail-link:hover {
-  color: $color-halogen;
-}
-
-.modal-details {
-  margin: 10px 0 15px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.modal-detail {
-  display: flex;
-  align-items: center;
-  margin: 5px 0;
-}
-
-.modal-detail__label,
-.modal-detail__value {
-  margin: 0 3px;
-}
-
-.modal-details__group > .modal-detail__value,
-.modal-details__state > .modal-detail__value {
-  text-transform: capitalize;
-}
-
-.detail-link {
-  text-decoration: none;
-  transition: 100ms ease-out;
-}
+// the good stuff
 
 .periodic-table {
   width: 100%;
@@ -289,6 +217,170 @@ $color-modal-close-btn: #ED474A;
   left: 8%;
   font-size: 2.1vw;
   transition: inherit;
+}
+
+// Styles for the modal
+
+.pt-backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9998;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.pt-modal {
+  position: absolute;
+  top: 50vh;
+  left: 50vw;
+  transform: translate(-50%, calc(-50%));
+  z-index: 9999;
+  background: $color-modal-background;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 15px 10px;
+  border-radius: 4px;
+  min-width: 320px;
+  width: 45vw;
+  max-width: $width-max--modal;
+  max-height: 85vh;
+}
+
+.pt-modal__close-btn {
+  position: absolute;
+  width: 55px;
+  height: 55px;
+  right: 5px;
+  top: 5px;
+  background-color: transparent;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: 200ms;
+
+  // Shadow on hover
+  &:hover {
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1), inset 0 0 0 35px rgba(0, 0, 0, 0.1);
+  }
+
+  // Making the "X" icon using `:before` and `:after` pseudo-elements
+  &:before, 
+  &:after {
+    position: absolute;
+    content: '';
+    top: 50%;
+    left: 25%;
+    width: 50%;
+    height: 2px;
+    background-color: black;
+  }
+
+  &:before {
+    transform: translateY(-50%) rotate(45deg);
+  }
+
+  &:after {
+    transform: translateY(-50%) rotate(-45deg);
+  }
+}
+
+.pt-modal-header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 15px 0 15px;
+}
+
+.modal-header__title {
+  font-size: 26px;
+}
+
+.modal-header__image {
+  max-width: 20vw;
+}
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0 20px;
+}
+
+.modal-content__summary {
+  font-size: 15px;
+}
+
+.modal-content__wiki-link {
+  padding: 10px 0 5px;
+  text-decoration: none;
+  transition: 100ms ease-out;
+}
+
+.modal-content__wiki-link:hover,
+.detail-link:hover {
+  color: $color-halogen;
+}
+
+.modal-details {
+  margin: 10px 0 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.modal-detail {
+  display: flex;
+  align-items: center;
+  margin: 5px 0;
+}
+
+.modal-detail__label,
+.modal-detail__value {
+  margin: 0 3px;
+}
+
+.modal-details__group > .modal-detail__value,
+.modal-details__state > .modal-detail__value {
+  text-transform: capitalize;
+}
+
+.detail-link {
+  text-decoration: none;
+  transition: 100ms ease-out;
+}
+
+// Media queries
+
+@media (min-width: 760px) {
+
+  .periodic-table {
+    justify-content: space-around;
+  }
+
+  .pt-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 8vh;
+  }
+
+  .pt-title {
+    font-size: 6vw;
+    font-weight: 600;
+  }
+
+  .pt-subtitle {
+    font-size: 4vw;
+    margin-top: 1vh;
+  }
+
+  .pt-modal {
+    transform: translate(-50%, calc(-50% + 11vh));
+  }
 }
 
 @media (min-width: 900px) {

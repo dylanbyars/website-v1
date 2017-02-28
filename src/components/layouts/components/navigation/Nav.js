@@ -32,6 +32,10 @@ class Nav extends Component {
         window.addEventListener('resize', this.onResize)
     }
 
+    componentWillUnmount() {
+        window.removeEventListener('resize', this.onResize)
+    }
+
     onResize(e) {
         if (e.target.outerWidth > 450) {
             if (this.state.nav !== 'maxi') {

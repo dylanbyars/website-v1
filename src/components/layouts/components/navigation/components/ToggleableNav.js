@@ -38,7 +38,11 @@ class ToggleableNav extends Component {
   render() {
     
     const links = this.props.navItems.map(({link, path }) => {
-      return <Link key={link} className="nav__item--mini" activeClassName="active-link--mini" to={path} onClick={this.toggleMenu}>{link}</Link>
+      if (path === '/') {
+        return <Link key={link} className="nav__item--mini home-mini" to={path} onClick={this.toggleMenu}>{link}</Link>
+      } else {
+        return <Link key={link} className="nav__item--mini" activeClassName="active-link--mini" to={path} onClick={this.toggleMenu}>{link}</Link>
+      }
     })
     
     if (this.state.menuOpen) {

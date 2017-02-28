@@ -28,13 +28,13 @@ export const Footer = () => {
 
                 <div className="footer__social-item">
                     <a href="mailto:dylan@dylanbyars.com">
-<img className="footer__social-img" src={emailIcon} alt="Holler" /></a>
+<img className="footer__social-img mail-icon" src={emailIcon} alt="Holler" /></a>
                 </div>
 
-                {/*<div className="footer__thanks">
-                    <p>Proudly powered by <a href="http://">rice and beans</a>.</p>
-                </div>*/}
+            </div>
 
+            <div className="footer__thanks">
+                <p>proudly powered by <a href="https://github.com/dbyars/dylan-byars-v2">hand coding</a></p>
             </div>
 
         </footer>

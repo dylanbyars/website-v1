@@ -1,13 +1,53 @@
 /* Projects Element Styles */
 
 .projects {
-
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.projects__content {
-  
+.projects__blurb {
+
 }
 
 .project {
+
+}
+
+.projects__nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5vh;
+  width: 85%;
+  border: 1px solid blue;
+}
+
+.project-preview {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 85%;
+    min-height: 250px;
+    margin: 5vh 0;
+    border: solid;
+}
+
+.project-preview__link {
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.project-preview__link--active {
+  font-size: 25px;
+}
+
+.project-preview__description {
     
+}
+
+.project-preview__description > p {
+    margin: 3vh 0;
 }

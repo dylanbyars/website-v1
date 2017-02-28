@@ -1,45 +1,49 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Link } from 'react-router';
-// import { ProjectPreview } from './components/ProjectPreview';
-// import PeriodicTable from './components/periodic-table-app/PeriodicTable';
-// import WeatherApp from './components/weather-app/WeatherApp';
 
-class Projects extends Component {
-    constructor() {
-        super()
+export const Projects = ({ children }) => {
 
-        this.state = {
-            pageTitle: 'Projects',
-            projectOpen: false
-        }
+    return (
+        <div className="projects page">
 
-        this.handleClick = this.handleClick.bind(this)
-    }
+            { !children && 
+            <span><div className="page__header">
+                <div className="page__title">Projects</div>
+            </div>
+            
+            <div className="projects__blurb page__blurb">
+                <p>"Oh wow! Sweet apps!"</p>
+                <p> - Everybody</p>
+            </div></span> }
 
-    handleClick(newTitle) {
-        this.setState({pageTitle: newTitle})
-    }
+            { children && <div className="project">{children}</div> }
 
-    render() {
+            <div className="projects__nav">
 
-        return (
-            <div className="projects page">
+                <div className="project-preview">
 
-                <div className="page__header">
-                    <div className="page__title">{this.state.pageTitle}</div>
+                    <Link className="project-preview__link" activeClassName="project-preview__link--active" to="/projects/periodic-table-app">Periodic Table App</Link>
+                    
+                    <div className="project-preview__description">
+                        <p>A periodic table web app that gives users access to the most commonly queried information along with a link to each element's Wikipedia page. This was a great chance to learn how to manage AJAX requests in React applications.</p>
+                        <p>Looks best on desktops or mobile screens flipped to landscape mode.</p>
+                    </div>
+                    
                 </div>
                 
-                <Link to="/projects/periodic-table-app" onClick={() => this.handleClick('Periodic Table App')}>Periodic Table App</Link>
+                <div className="project-preview">
 
-                <Link to="/projects/weather-app" onClick={() => this.handleClick('Weather App')}>Weather App</Link>
-
-                <div className="project">
-                    {this.props.children}
+                    <Link className="project-preview__link" activeClassName="project-preview__link--active" to="/projects/weather-app">Weather App</Link>
+                    
+                    <div className="project-preview__description">
+                        <p>Learn the metric system with this minimalistic weather app that shows you the current weather for a given location in metric and imperial units.</p>
+                        <p>Get a head start on learning that funky new Metric system the world keeps raving about.</p>
+                    </div>
+                
                 </div>
 
             </div>
-        )
-    }
-}
 
-export default Projects;
+        </div>
+    )
+}

@@ -1,52 +1,45 @@
-import React, { Component } from 'react';
+import React from 'react';
 import ReactTransitionGroup from 'react-addons-transition-group';
 import SkillBar from './SkillBar';
+import { Key } from './Key';
 
-class SkillChart extends Component {
-  constructor(props) {
-    super(props)
+export const SkillChart = () => {
 
-    this.state = {
-      skills: [{
-        "HTML5": "virtuoso"
-      }, {
-        "CSS3": "virtuoso"
-      }, {
-        "Javascript": "cozy"
-      }, {
-        "React": "cozy"
-      }, {
-        "Redux": "learning"
-      }, {
-        "Polymer": "learning"
-      }, {
-        "jQuery": "learning"
-      }, {
-        "Wordpress": "fiddled"
-      }, {
-        "Webpack": "learning"
-      }, {
-        "Bower": "fiddled"
-      }, {
-        "Git": "cozy"
-      }, {
-        "Node.js": "learning"
-      }, {
-        "Python": "fiddled"
-      }, {
-        "Firebase": "read"
-      }, {
-        "C++": "read"
-      }]
-    }
+  const skills = [{
+  "HTML5": "virtuoso"
+}, {
+  "CSS3 / SCSS": "virtuoso"
+}, {
+  "Javascript": "cozy"
+}, {
+  "React": "cozy"
+}, {
+  "Redux": "learning"
+}, {
+  "Polymer": "learning"
+}, {
+  "Firebase": "fiddled"
+}, {
+  "Git": "cozy"
+}, {
+  "jQuery": "learning"
+}, {
+  "Webpack": "learning"
+}, {
+  "Bower": "fiddled"
+}, {
+  "Node.js": "learning"
+}, {
+  "Wordpress": "fiddled"
+}, , {
+  "Python": "fiddled"
+}, {
+  "GreenSock": "fiddled"
+}, ]
 
-    this.setSkillBars = this.setSkillBars.bind(this)
-
-  }
-
-  setSkillBars() {
-    let delay = .4
-    const skillBars = this.state.skills.map(skill => {
+  const skillBars = () => {
+    let delay = 0.4
+    return skills.map(skill => {
       let tech = Object.keys(skill)[0]
       let prow = skill[tech]
       delay += .15
@@ -56,23 +49,12 @@ class SkillChart extends Component {
         </ReactTransitionGroup>
       )
     })
-    return skillBars
   }
 
-  render() {
-    return (
-      <div className="skill-chart">
-        <div className="skill-chart__widget">{this.setSkillBars()}</div>
-        <div className="skill-chart__key">
-          <div className="key__virtuoso">Virtuoso</div>
-          <div className="key__cozy">Cozy</div>
-          <div className="key__learning">Learning to Love</div>
-          <div className="key__fiddled">Fiddled With</div>
-          <div className="key__read">Read the Docs</div>
-        </div>
-      </div>
-    )
-  }
+  return (
+    <div className="skill-chart">
+      {skillBars()}
+      <Key />
+    </div>
+  )
 }
-
-export default SkillChart;

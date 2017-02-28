@@ -7,35 +7,33 @@ class SkillBar extends Component {
   componentWillAppear(callback) {
 
     // figure out what the final width should be for the particular bar
+    // need to calculate it here instead of relying on CSS in order for the tween to work
     const getWidth = () => {
       switch (this.props.prowess) {
         case 'virtuoso':
-          return '65vw'
+          return '80vw'
           break
         case 'cozy':
-          return '50vw'
+          return '65vw'
           break
         case 'learning':
-          return '35vw'
+          return '50vw'
           break
         case 'fiddled':
-          return '20vw'
+          return '35vw'
           break
         case 'read':
-          return '10vw'
+          return '20vw'
           break
-        default:
-          return '5vw'
       }
     }
 
-    const barElement = this.barContainer
-    const labelElement = this.labelContainer
+    const el = this.container
     const loadDelay = this.props.delay
     const barWidth = getWidth()
-    
+
     // grows the bar with a bounce
-    TweenMax.fromTo(barElement, 1.1, {
+    TweenMax.fromTo(el, 1.1, {
       width: "0%"
     }, {
       width: barWidth,
@@ -43,33 +41,18 @@ class SkillBar extends Component {
       ease: Bounce.easeOut,
       onComplete: callback
     })
-
-    // tips the label down
-    TweenMax.to(
-      labelElement, 
-      1.1, 
-      {
-        scale: 1.15,
-        rotation: -15, 
-        y: 10,
-        delay: loadDelay,
-        ease: Elastic.easeOut,
-        onComplete: callback
-    })
   }
 
   render() {
 
-    let { technology, prowess } = this.props
-
-    let prowessStyles = classNames(prowess, 'bar')
+    let {
+      technology,
+      prowess
+    } = this.props
 
     return (
       <div className="skill-bar">
-        <div className="technology" ref={c => this.labelContainer = c}>{technology}</div>
-        <div className="container__skill-bar">
-          <div className={prowessStyles} ref={c => this.barContainer = c}>{prowess}</div>
-        </div>
+        <div className={`${prowess} bar`} ref={c => this.container = c}>{technology}</div>
       </div>
     )
   }

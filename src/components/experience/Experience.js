@@ -1,22 +1,8 @@
 import React from 'react';
-import { resume } from './resume';
-import { Gig } from './components/Gig';
-import SkillChart from './components/skill-chart/SkillChart';
+import { SkillChart } from './components/skill-chart/SkillChart';
+import { Resume } from './components/resume/Resume';
 
 export const Experience = () => {
-
-    const experienceSections = resume.map(section => {
-
-        const gigs = section.gigs.map(
-            ({ title, company, description }) => <Gig title={title} company={company} description={description} />)
-
-        return (
-            <div className="experience__section">
-                <div className="experience__category">{section.category}</div>
-                <div className="experience__gigs">{gigs}</div>
-            </div>
-        )
-    })
 
     return (
         <div className="experience page">
@@ -25,14 +11,23 @@ export const Experience = () => {
                 <div className="page__title">Experience</div>
             </div>
 
+            <div className="experience__blurb page__blurb">
+                <p>Take a look at what's been keeping me busy. If you think I'd make a nice fit for your team, <a href="mailto:dylan@dylanbyars.com">send me a note!</a></p>
+            </div>
+
+            <div className="experience__sub-header">Skills</div>
             <div className="experience__skill-chart">
-                <div className="experience__sub-header">Skills</div>
                 <SkillChart />
             </div>
 
+            <div className="experience__sub-header">Resume</div>
             <div className="experience__resume">
-                <div className="experience__sub-header">Resume</div>
-                <div className="experience__sections">{experienceSections}</div>
+                <Resume />
+            </div>
+
+            <div className="experience__sub-header">Volunteer</div>
+            <div className="experience__volunteer">
+                EMT
             </div>
             
         </div>

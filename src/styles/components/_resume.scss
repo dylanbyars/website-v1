@@ -1,0 +1,54 @@
+// Resume element styles
+
+.resume {
+
+}
+
+.resume__section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: space-around;
+    margin: 0 3vh;
+}
+
+.section__category {
+    margin-right: 5vw;
+    font-size: 5.5vh;
+    align-self: flex-end;
+    font-family: 'Heebo', sans-serif;
+}
+
+.section__gigs {
+    display: flex;
+    flex-direction: column;
+    align-items: space-between;
+    padding: 6vh 0;
+}
+
+.gig {
+    margin-bottom: 3.5vh;
+}
+
+.gig__title {
+    font-size: 3vh;
+    font-family: sans-serif;
+    margin: 2vh 0;
+}
+
+.gig__company {
+    font-size: 2.5vh;
+    font-family: sans-serif;
+    margin: 2vh 0;
+}
+
+.gig__descriptions {
+    list-style-type: circle;
+    list-style-position: inside;
+}
+
+.gig__description {
+    margin: 2vh 0;
+    line-height: 1.4;
+    font-family: sans-serif;
+}

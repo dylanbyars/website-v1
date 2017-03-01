@@ -1,60 +1,96 @@
-import React from 'react';
+import React, { Component } from 'react';
+import debounce from 'lodash/debounce';
 import ReactTransitionGroup from 'react-addons-transition-group';
 import SkillBar from './SkillBar';
 import { Key } from './Key';
 
-export const SkillChart = () => {
+class SkillChart extends Component {
+  constructor(props) {
+    super(props)
 
-  const skills = [{
-  "HTML5": "virtuoso"
-}, {
-  "CSS3 / SCSS": "virtuoso"
-}, {
-  "Javascript": "cozy"
-}, {
-  "React": "cozy"
-}, {
-  "Redux": "learning"
-}, {
-  "Polymer": "learning"
-}, {
-  "Firebase": "fiddled"
-}, {
-  "Git": "cozy"
-}, {
-  "jQuery": "learning"
-}, {
-  "Webpack": "learning"
-}, {
-  "Bower": "fiddled"
-}, {
-  "Node.js": "learning"
-}, {
-  "Wordpress": "fiddled"
-}, , {
-  "Python": "fiddled"
-}, {
-  "GreenSock": "fiddled"
-}, ]
+    this.state = {
+      skills: [
+        {
+          "HTML5": "virtuoso"
+        }, {
+          "CSS3 / SCSS": "virtuoso"
+        }, {
+          "Javascript": "cozy"
+        }, {
+          "React": "cozy"
+        }, {
+          "Redux": "learning"
+        }, {
+          "Polymer": "learning"
+        }, {
+          "Firebase": "fiddled"
+        }, {
+          "Git": "cozy"
+        }, {
+          "jQuery": "learning"
+        }, {
+          "Webpack": "learning"
+        }, {
+          "Bower": "fiddled"
+        }, {
+          "Node.js": "learning"
+        }, {
+          "Wordpress": "fiddled"
+        }, {
+          "Python": "fiddled"
+        }, {
+          "GreenSock": "fiddled"
+        }],
+        scrolled: false
+      }
 
-  const skillBars = () => {
-    let delay = 0.4
-    return skills.map(skill => {
-      let tech = Object.keys(skill)[0]
-      let prow = skill[tech]
-      delay += .15
-      return (
-        <ReactTransitionGroup>
-          <SkillBar key={tech} technology={tech} prowess={prow} delay={delay} />
-        </ReactTransitionGroup>
-      )
-    })
+      this.scrolled = this.scrolled.bind(this)
   }
 
-  return (
-    <div className="skill-chart">
-      {skillBars()}
-      <Key />
-    </div>
-  )
+  componentDidMount() {
+    // adding a debounced event listener so that the bars aren't actually displayed until the user starts scrolling on the page
+    window.addEventListener('scroll', debounce(this.scrolled, 150, {leading: true, trailing: false}))
+  }
+
+  scrolled() {
+    console.log('scroll fired from experience')
+    if (!this.state.scrolled) {
+      this.setState({scrolled: true})
+    }
+    // remove the event listener since they've already seen the action the event listener was waiting for. 
+    // Not working for some reason...
+    window.removeEventListener('scroll', debounce(this.scrolled, 150, {leading: true, trailing: false}))
+  }
+
+  render() {
+
+    if (!this.state.scrolled) {
+      return null
+    } else {
+      const skillBars = () => {
+        let delay = 0
+        return this.state.skills.map(skill => {
+          let tech = Object.keys(skill)[0]
+          let prow = skill[tech]
+          delay += .15
+          return (
+            <ReactTransitionGroup key={`${tech}${delay}`}>
+              <SkillBar technology={tech} prowess={prow} delay={delay} />
+            </ReactTransitionGroup>
+          )
+        })
+      }
+
+      return (
+        <div className="skill-chart">
+          {skillBars()}
+          <Key />
+        </div>
+      )
+
+    }
+
+  }
 }
+
+export default SkillChart;

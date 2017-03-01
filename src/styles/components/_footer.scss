@@ -1,22 +1,25 @@
 /* Footer Element Styles */
 
+$height--footer: 200px;
+
+$unvisited-link-color: green;
+
 .footer {
   position: absolute;
   bottom: 0;
   left: 0;
-  min-width: 100vw;
-  height: 115px;
+  width: 100vw;
+  height: $height--footer;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
 .footer__social-media {
   display: flex;
   width: 80%;
   justify-content: space-around;
-  align-items: center;
 }
 
 .footer__social-item {
@@ -39,11 +42,15 @@
 
 .footer__thanks {
 
-  margin-bottom: 25px;
+  position: absolute;
+  bottom: 15px;
+  font-family: $font--db;
+  font-size: 11px;
+  letter-spacing: 0.3px;
   
   & a {
     text-decoration: none;
-    color: green;
+    color: $unvisited-link-color;
   }
 
 }
@@ -56,6 +63,11 @@
 
   .footer__social-media {
     width: 45%;
+  }
+
+  .footer__thanks {
+    font-size: 13px;
+    letter-spacing: 0.5px;
   }
 
 }

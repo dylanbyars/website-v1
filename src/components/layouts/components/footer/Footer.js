@@ -1,5 +1,5 @@
 import React from 'react';
-// import { Quoter } from './components/quoter/Quoter';
+
 // icons
 import codepenLogo from '../icons/codepen-logo--border.svg';
 import githubLogo from '../icons/github-logo.svg';
@@ -34,7 +34,7 @@ export const Footer = () => {
             </div>
 
             <div className="footer__thanks">
-                <p>proudly powered by <a href="https://github.com/dbyars/dylan-byars-v2">hand coding</a></p>
+                <p>proudly powered by <a className="inline-link" href="https://github.com/dbyars/dylan-byars-v2">hand coding</a></p>
             </div>
 
         </footer>

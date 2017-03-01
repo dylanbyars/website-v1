@@ -25,7 +25,7 @@ export const Projects = ({ children }) => {
                     <Link className="project-preview__link" activeClassName="project-preview__link--active" to="/projects/periodic-table-app">Periodic Table App</Link>
                     
                     <div className="project-preview__description">
-                        <p>A periodic table web app that gives users access to the most commonly queried information along with a link to each element's Wikipedia page. This was a great chance to learn how to manage AJAX requests in React applications.</p>
+                        <p>A periodic table web app that connects users with elemental data from Wikipedia through a slick user interface.</p>
                         <p>Looks best on desktops or mobile screens flipped to landscape mode.</p>
                     </div>
                     

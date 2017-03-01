@@ -1,9 +1,7 @@
 /* Projects Element Styles */
 
 .projects {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+
 }
 
 .projects__blurb {
@@ -16,8 +14,8 @@
 
 .projects__nav {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
   align-items: center;
   margin-top: 5vh;
   width: 85%;
@@ -29,15 +27,16 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    width: 85%;
-    min-height: 250px;
-    margin: 5vh 0;
+    max-width: 275px;
+    margin: 2.5vh 0;
+    padding: 5%;
     border: solid;
 }
 
 .project-preview__link {
   text-decoration: none;
   font-size: 18px;
+  color: blue;
 }
 
 .project-preview__link--active {
@@ -45,9 +44,15 @@
 }
 
 .project-preview__description {
-    
+    // line-height: 1.34;
 }
 
 .project-preview__description > p {
     margin: 3vh 0;
+}
+
+@media screen and (min-width: 760px) {
+  .project-preview {
+    max-width: 32vw;
+  }
 }

@@ -4,6 +4,7 @@
 $items: 4;
 $transition-duration: 0.5s;
 $transition-delay: 0.1s;
+
 $color--mini-nav-item: black;
 $color--mini-nav-item-active: white;
 $color--mini-nav-close: white;
@@ -76,7 +77,7 @@ $color--mini-nav-close-border: white;
   clear: both;
   color: transparent;
   font-size: 14px;
-  font-family: 'Heebo', sans-serif;
+  font-family: $font--db;
   letter-spacing: -5px;
   text-transform: uppercase;
   text-decoration: none;
@@ -152,7 +153,7 @@ $color--mini-nav-close-border: white;
     z-index: 9999;
 
     .home-mini {
-      font-family: 'Annie Use Your Telescope', cursive;
+      font-family: $font--db;
     }
 
     // Restoring nav items from lines in the menu icon

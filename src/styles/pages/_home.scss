@@ -1,4 +1,4 @@
-/* Home element styles */
+// Home element styles
 
 .home {
   height: 100vh;
@@ -7,6 +7,7 @@
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  background-color: transparent;
 }
 
 .home__navigation {
@@ -19,10 +20,10 @@
 
 .home__nav-link {
   color: black;
-  font-family: 'Heebo', sans-serif;
+  font-family: $font--nav-link;
   text-decoration: none;
-  font-size: 4.5vw;
-  letter-spacing: 0.75vw;
+  font-size: 5vw;
+  letter-spacing: 0.8vw;
 }
 
 .home__nav-link:after {
@@ -40,25 +41,23 @@
 }
 
 .home__db {
-  background-color: white;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 18vw;
+  font-size: 11vw;
   color: black;
-  padding: 3vw;
-  font-family: 'Annie Use Your Telescope', cursive;
+  font-family: $font--db;
 }
 
 .home__hustle {
-  background-color: white;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 5.5vw;
   color: black;
   padding: 1vw 2vw;
-  font-family: 'Heebo', sans-serif;
+  font-family: $font--home-hustle;
+  font-size: 5vw;
+  letter-spacing: 0.8vw;
 }
 
 @media screen and (min-width: 760px) {

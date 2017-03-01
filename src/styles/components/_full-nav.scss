@@ -1,5 +1,13 @@
 /* Styles for the FullNav component */
 
+$full-nav-background: rgba(0, 0, 0, 0.02);
+
+$home-link-text: black;
+$home-link-background: white;
+
+$nav-link-text: black;
+$nav-link-background: white;
+
 .full-nav {
   position: relative;
   top: 0;
@@ -10,7 +18,7 @@
   width: 100vw;
   height: 11vh;
   z-index: 9999;
-  background: transparent;
+  background-color: $full-nav-background;
 }
 
 .full-nav__home {
@@ -21,9 +29,9 @@
 
 .home__link {
     text-decoration: none;
-    color: black;
+    color: $home-link-text;
     font-size: 3.5vw;
-    font-family: 'Annie Use Your Telescope', cursive;
+    font-family: $font--db;
     padding: 9px;
     border-radius: 3px;
     transition: 300ms;
@@ -35,20 +43,21 @@
 }
 
 .full-nav__links {
-    width: 45%;
+    width: 55%;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    font-family: 'Heebo', sans-serif;
+    font-family: $font--nav-link;
 }
 
 .nav__item--maxi {
     text-decoration: none;
     padding: 9px;
-    letter-spacing: .09em;
+    letter-spacing: 0.5vw;
     color: black;
     border-radius: 3px;
-    transition: 300ms;
+    transition: 275ms;
+    font-size: 2.8vw;
 }
 
 .nav__item--maxi:hover {
@@ -62,12 +71,16 @@
 }
 
 .active-link--maxi:hover {
-    background-color: white;
-    color: black;
+    background-color: transparent;
+    color: $nav-link-text;
 }
 
 @media screen and (min-width: 760px) {
     .home__link {
         font-size: 30px;
+    }
+
+    .nav__item--maxi {
+        font-size: 26px;
     }
 }

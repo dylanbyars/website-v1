@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import debounce from 'lodash/debounce';
 import { FullNav } from './components/FullNav';
 import ToggleableNav from './components/ToggleableNav';
 
@@ -29,14 +30,17 @@ class Nav extends Component {
         } else {
             this.setState({nav: 'mini'})
         }
-        window.addEventListener('resize', this.onResize)
+        // adding a debounce function to the event listener so that the window resize event isn't called constantly while the window's actually being resized.
+        window.addEventListener('resize', debounce(this.onResize, 300, {leading: true, trailing: false}))
     }
 
     componentWillUnmount() {
-        window.removeEventListener('resize', this.onResize)
+        // remove event listener when component's unmounted when returning to the home page
+        window.removeEventListener('resize', debounce(this.onResize, 150, {leading: true, trailing: false}))
     }
 
     onResize(e) {
+        console.log('resized from Nav element')
         if (e.target.outerWidth > 450) {
             if (this.state.nav !== 'maxi') {
                 this.setState({nav: 'maxi'})

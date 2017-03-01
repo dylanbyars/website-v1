@@ -2,14 +2,14 @@ import React from 'react';
 import Nav from './components/navigation/Nav';
 import { Footer } from './components/footer/Footer';
 
-export const RoamingLayout = ({ children }) => {
+export const RootLayout = ({ children }) => {
 
     return (
-        <div className="root">
+        <div className="root-layout">
             
             <Nav />
             
-            <div className="root__content">
+            <div className="root-layout__content">
                 {children}
             </div>
             

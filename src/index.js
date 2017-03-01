@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { render } from 'react-dom';
 import { Router, Route, IndexRoute, browserHistory } from 'react-router';
 import { HomeLayout } from './components/layouts/HomeLayout';
-import { RoamingLayout } from './components/layouts/RoamingLayout';
+import { RootLayout } from './components/layouts/RootLayout';
 import { Home } from './components/home/Home';
 import { Experience } from './components/experience/Experience';
 import { Projects } from './components/projects/Projects';
@@ -18,7 +18,7 @@ class SweetWebsite extends Component {
       <Router history={browserHistory}>
         <Route path="/" component={HomeLayout}>
           <IndexRoute component={Home} />
-          <Route component={RoamingLayout}>
+          <Route component={RootLayout}>
             <Route path="experience" component={Experience} />
             <Route path="projects" component={Projects}>
               <Route path="periodic-table-app" component={PeriodicTableApp} />

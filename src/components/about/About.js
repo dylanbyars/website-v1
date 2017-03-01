@@ -2,20 +2,27 @@ import React from 'react';
 
 export const About = () => {
     return (
-        <div className="about">
+        <div className="about page">
 
             <div className="page__header">
                 <div className="page__title">About</div>
             </div>
 
             <div className="about__blurb">
-                <img className="about__img" src="https://i.imgur.com/wDSPIvj.jpg" alt="Dylan"/>
+                <div className="about__img">
+                    <img src="https://i.imgur.com/wDSPIvj.jpg" alt="Dylan"/>
+                    <p className="img-caption">* Me posing with world-renowned forehead model Gla Bella (right).</p>
+                </div>
                 <p>Thanks for checking out my site!</p>
                 <br/>
                 <p>I'm an aspiring junior frontend web developer itching to join a team of pixel-pushers in the Northern Virginia/Washington D.C. area.</p>
                 <br/>
-                <p>If you think I'd make a nice addition to your team, please <a href="mailto:dylan@dylanbyars.com">send me a note!</a></p>
+                <p>If you think I'd make a nice addition to your team, please <a className="inline-link" href="mailto:dylan@dylanbyars.com">send me a note!</a></p>
             </div>
+
+            {/*<div className="about__write-up page__blurb">
+                <p>Oh boy did I sure learn a whole heap building this hear website. I'll tell you hwhat!</p>
+            </div>*/}
 
             {/*<div className="about__blogs">
                 <p className="blogs-blurb">Here's a collection of some of the web development blogs I read regularly. Hopefully you'll enjoy them, too!</p>

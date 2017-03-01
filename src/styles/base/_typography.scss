@@ -1,8 +1,8 @@
-// Nav and home subheader font
-@import url('https://fonts.googleapis.com/css?family=Heebo:100');
+// Home page nav and hustle font and full page nav font
+@import url('https://fonts.googleapis.com/css?family=Fjalla+One');
 
 // Font for my name in the header
-@import url('https://fonts.googleapis.com/css?family=Annie+Use+Your+Telescope|Architects+Daughter|Indie+Flower');
+@import url('https://fonts.googleapis.com/css?family=Architects+Daughter');
 
 // Page headers
 @import url('https://fonts.googleapis.com/css?family=NTR|Nunito|Press+Start+2P|Rajdhani');
@@ -10,6 +10,11 @@
 // Page text
 @import url('https://fonts.googleapis.com/css?family=Nunito+Sans');
 
-* {
-    font-family: 'Nunito Sans', sans-serif;
-}
+// Font variables
+$font--nav-link: 'Fjalla One', sans-serif;
+$font--home-hustle: 'Fjalla One', sans-serif;
+$font--db: 'Architects Daughter', cursive;
+
+// $font--page-title: 'Rajdhani', sans-serif;
+// $font--page-title: 'NTR', sans-serif;
+$font--page-title: 'Nunito', sans-serif;

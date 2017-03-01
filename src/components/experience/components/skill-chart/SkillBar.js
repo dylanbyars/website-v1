@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import { TweenMax, Bounce, Elastic } from 'gsap';
-import classNames from 'classnames';
+import { TweenMax, Bounce } from 'gsap';
 
 class SkillBar extends Component {
 
@@ -22,15 +21,31 @@ class SkillBar extends Component {
         case 'fiddled':
           return '35vw'
           break
-        case 'read':
-          return '20vw'
+        default:
+          return '80vw'
           break
       }
     }
 
+    // A more elegant way to handle the switch/case maybe?
+    // const widths = [
+    //   {'virtuoso': '80vw'},
+    //   {'cozy': '65vw'},
+    //   {'learning': '50vw'},
+    //   {'fiddled': '35vw'},
+    // ]
+
+    // const getWidth = (prowessBar) => {
+    //   return widths.filter(item => {
+    //     if (prowessBar === Object.keys(item)) {
+    //       return item[prowessBar]
+    //     }
+    //   })
+    // }
+
     const el = this.container
     const loadDelay = this.props.delay
-    const barWidth = getWidth()
+    const barWidth = getWidth(this.props.prowess)
 
     // grows the bar with a bounce
     TweenMax.fromTo(el, 1.1, {
@@ -45,10 +60,7 @@ class SkillBar extends Component {
 
   render() {
 
-    let {
-      technology,
-      prowess
-    } = this.props
+    let { technology, prowess } = this.props
 
     return (
       <div className="skill-bar">

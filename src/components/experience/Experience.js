@@ -1,5 +1,5 @@
 import React from 'react';
-import { SkillChart } from './components/skill-chart/SkillChart';
+import SkillChart from './components/skill-chart/SkillChart';
 import { Resume } from './components/resume/Resume';
 
 export const Experience = () => {
@@ -12,7 +12,7 @@ export const Experience = () => {
             </div>
 
             <div className="experience__blurb page__blurb">
-                <p>Take a look at what's been keeping me busy. If you think I'd make a nice fit for your team, <a href="mailto:dylan@dylanbyars.com">send me a note!</a></p>
+                <p>Take a look at what's been keeping me busy. If you think I'd make a nice fit for your team, <a className="inline-link" href="mailto:dylan@dylanbyars.com">send me a note!</a></p>
             </div>
 
             <div className="experience__sub-header">Skills</div>
@@ -25,10 +25,10 @@ export const Experience = () => {
                 <Resume />
             </div>
 
-            <div className="experience__sub-header">Volunteer</div>
+            {/*<div className="experience__sub-header">Volunteer</div>
             <div className="experience__volunteer">
                 EMT
-            </div>
+            </div>*/}
             
         </div>
     )

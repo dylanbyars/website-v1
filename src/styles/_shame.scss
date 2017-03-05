@@ -1,5 +1,8 @@
 // Shame styles
 
+$color--inline-link: $red;
+$color--inline-link-hovered: $dark-red;
+
 .page {
   display: flex;
   flex-direction: column;
@@ -11,7 +14,7 @@
   height: 25vh;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
 }
 
 .page__title {
@@ -21,35 +24,40 @@
     font-family: $font--page-title;
     font-size: 11vw;
     letter-spacing: 2px;
+    padding-bottom: 4vh;
 }
 
-.page__blurb {
+.page__sub-header {
   display: flex;
-  flex-direction: column;
+  align-self: flex-start;
   align-items: center;
-  justify-content: center;
-  width: 80vw;
+  font-family: $font--page-sub-header;
+  font-size: 13vw;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+  margin-left: 5vw;
+  color: $black;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.4);
 }
 
 .inline-link {
-    // text-decoration: none;
-    // color: black;
-    // border-radius: 3px;
-    // transition: 300ms;
+    text-decoration: none;
+    color: $color--inline-link;
+    transition: 150ms;
 }
 
 .inline-link:hover {
-    // background-color: black;
-    // color: white;
-    // padding: 5px;
+    color: $color--inline-link-hovered;
 }
 
-@media screen and (min-width: 760px) {
-  .page__title {
-    font-size: 75px;
+@media screen and (min-width: 451px) {
+  
+  .page__header {
+    display: none;
   }
 
-  .page__blurb {
-    max-width: 550px;
+  .page__sub-header {
+    font-size: 7vw;
   }
+
 }

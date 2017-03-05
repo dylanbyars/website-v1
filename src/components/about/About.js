@@ -4,11 +4,13 @@ export const About = () => {
     return (
         <div className="about page">
 
-            <div className="page__header">
-                <div className="page__title">About</div>
+            <div className="page__sub-header">About this site</div>
+            <div className="about__section">
+                <p>Stay tuned for a detailed write up all about putting this website together.</p>
             </div>
 
-            <div className="about__blurb">
+            <div className="page__sub-header">About me</div>
+            <div className="about__section">
                 <div className="about__img">
                     <img src="https://i.imgur.com/wDSPIvj.jpg" alt="Dylan"/>
                     <p className="img-caption">* Me posing with world-renowned forehead model Gla Bella (right).</p>

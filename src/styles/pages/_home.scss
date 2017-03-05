@@ -19,7 +19,7 @@
 }
 
 .home__nav-link {
-  color: black;
+  color: $black;
   font-family: $font--nav-link;
   text-decoration: none;
   font-size: 5vw;
@@ -29,7 +29,7 @@
 .home__nav-link:after {
   content: "";
   display: block;
-  margin: auto;
+  margin: 5px auto 0;
   height: 3px;
   width: 0%;
   transition: .4s ease-in-out;
@@ -37,7 +37,7 @@
 
 .home__nav-link:hover:after {
   width: 100%;
-  background-color: black;
+  background-color: $black;
 }
 
 .home__db {
@@ -45,15 +45,16 @@
   justify-content: center;
   align-items: center;
   font-size: 11vw;
-  color: black;
+  color: $black;
   font-family: $font--db;
+  text-shadow: 0 5px 15px rgba(98, 100, 96, 0.9);
 }
 
 .home__hustle {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: black;
+  color: $black;
   padding: 1vw 2vw;
   font-family: $font--home-hustle;
   font-size: 5vw;

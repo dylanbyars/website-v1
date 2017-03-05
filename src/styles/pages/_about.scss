@@ -1,10 +1,11 @@
 /* About Element Styles */
 
 .about {
-
+  padding-top: 10vh;
+  padding-bottom: 5vh;
 }
 
-.about__blurb {
+.about__section {
   width: 80vw;
 }
 
@@ -38,8 +39,12 @@
 }
 
 @media screen and (min-width: 760px) {
-  .about__blurb,
-  .about__blogs {
+
+  .about {
+    padding-top: 0;
+  }
+
+  .about__section {
     width: 550px;
   }
 

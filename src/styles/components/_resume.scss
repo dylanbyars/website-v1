@@ -1,30 +1,24 @@
 // Resume element styles
 
 .resume {
-    // border: 1px solid blue;
+    
 }
 
 .resume__section {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: space-around;
-    margin: 0 8vw;
-
-    &:after {
-        content: '';
-        width: 90%;
-        height: 1px;
-        background-color: black;
-        margin: 0 auto 3vh;
-    }
+    align-items: space-between;
+    margin: 2vh 8vw 4vh;
+    border: $gray;
 }
 
 .section__category {
     margin-right: 5vw;
-    font-size: 8vw;
+    margin-bottom: 3vh;
+    font-size: 10vw;
     align-self: flex-end;
-    font-family: 'Heebo', sans-serif;
+    font-family: $font--resume-section-title;
 }
 
 .section__gigs {
@@ -32,26 +26,32 @@
     flex-direction: column;
     align-items: space-between;
     padding: 6vh 0;
+    border-radius: 3px;
 }
 
 .gig {
-    margin-bottom: 3.5vh;
-    font-family: sans-serif;
+    margin: 2vh;
+    background-color: $white;
+    padding: 3vmin;
+    border-radius: 4px;
 }
 
 .gig__title {
     font-size: 3vh;
     margin: 2vh 0;
+    display: inline-block;
+    padding-bottom: 1vh;
+    border-bottom: 1px dashed $black;
 }
 
 .gig__company {
     font-size: 2.5vh;
-    margin: 2vh 0;
+    margin: 2vh 0 4vh;
 }
 
 .gig__descriptions {
-    list-style-type: circle;
-    list-style-position: inside;
+    font-size: 2vh;
+    list-style-type: none;
 }
 
 .gig__description {
@@ -59,8 +59,37 @@
     line-height: 1.4;
 }
 
-@media screen and (min-width: 760px) {
+@media screen and (min-width: 450px) {
+
     .section__category {
         font-size: 3.5vw;
+    }
+
+}
+
+@media screen and (min-width: 960px) {
+
+    // .resume {
+    //     display: flex;
+    //     flex-wrap: wrap;
+    //     align-items: flex-start;
+    // }
+
+    // .resume__section {
+    //     max-width: 350px;
+    //     margin: 0 3vw;
+    // }
+
+    .resume__section {
+        margin: 2vh 4vw 6vh;
+    }
+
+    .section__gigs {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .gig {
+        max-width: 350px;
     }
 }

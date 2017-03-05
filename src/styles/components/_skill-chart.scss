@@ -5,7 +5,7 @@ $width--sc-full: 90vw;
 $height--sc-bar: calc(90vh / 20);
 /* color palette */
 $color--sc-background: #A8AEC1;
-$color--sc-key-background: #04151F;
+$color--sc-key-background: rgba(0, 0, 0, 0.7);
 $color--sc-fiddled: #EB9486;
 $color--sc-learning: #FFCF56;
 $color--sc-cozy: #B8E1FF;
@@ -18,7 +18,7 @@ $color--sc-virtuoso: #BAFF29;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  font-family: 'Cairo', sans-serif;
+  font-family: $font--text;
   animation: fadein 2s;
 }
 
@@ -103,10 +103,10 @@ $color--sc-virtuoso: #BAFF29;
   color: $color--sc-fiddled;
 }
 
-@media screen and (min-width: 760px) {
+@media screen and (min-width: 450px) {
 
   .key {
-    padding: 25px;
+    padding: 20px;
   }
 
   .key__item {

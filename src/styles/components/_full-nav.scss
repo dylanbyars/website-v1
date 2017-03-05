@@ -1,12 +1,11 @@
 /* Styles for the FullNav component */
 
-$full-nav-background: rgba(0, 0, 0, 0.02);
+$full-nav-background: rgba(228, 232, 226, 0.6);
 
-$home-link-text: black;
-$home-link-background: white;
+$nav-link-text: $black;
 
-$nav-link-text: black;
-$nav-link-background: white;
+$nav-link-text--hovered: $white;
+$nav-link-background--hovered: $nav-link-text;
 
 .full-nav {
   position: relative;
@@ -29,7 +28,7 @@ $nav-link-background: white;
 
 .home__link {
     text-decoration: none;
-    color: $home-link-text;
+    color: $nav-link-text;
     font-size: 3.5vw;
     font-family: $font--db;
     padding: 9px;
@@ -37,9 +36,10 @@ $nav-link-background: white;
     transition: 300ms;
 }
 
-.home__link:hover {
-    background-color: black;
-    color: white;
+.home__link:hover,
+.nav__item--maxi:hover {
+    background-color: $nav-link-background--hovered;
+    color: $nav-link-text--hovered;
 }
 
 .full-nav__links {
@@ -54,20 +54,15 @@ $nav-link-background: white;
     text-decoration: none;
     padding: 9px;
     letter-spacing: 0.5vw;
-    color: black;
+    color: $nav-link-text;
     border-radius: 3px;
     transition: 275ms;
     font-size: 2.8vw;
 }
 
-.nav__item--maxi:hover {
-    background-color: black;
-    color: white;
-}
-
 .active-link--maxi {
     border-radius: 0;
-    border-bottom: 1px solid black;
+    border-bottom: 2px solid $yellow;
 }
 
 .active-link--maxi:hover {
@@ -75,7 +70,7 @@ $nav-link-background: white;
     color: $nav-link-text;
 }
 
-@media screen and (min-width: 760px) {
+@media screen and (min-width: 450px) {
     .home__link {
         font-size: 30px;
     }

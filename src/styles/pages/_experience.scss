@@ -4,32 +4,10 @@
 
 }
 
-.experience__sub-header {
-  display: flex;
-  align-self: flex-start;
-  align-items: center;
-  font-family: 'Heebo', sans-serif;
-  font-size: 13vw;
-  margin-top: 5vh;
-  margin-bottom: 5vh;
-  margin-left: 5vw;
-  border-bottom: 1px solid black;
-}
-
 .experience__skill-chart {
   height: 85vh;
 }
 
-.experience__resume {
-
-}
-
-.experience__volunteer {
-  
-}
-
 @media screen and (min-width: 760px) {
-  .experience__sub-header {
-    font-size: 7vw;
-  }
+  
 }

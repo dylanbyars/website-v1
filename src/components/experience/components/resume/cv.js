@@ -5,7 +5,7 @@ export const cv = [{
             "title": "Data Collection Engineer",
             "company": "Leidos",
             "description": [
-                "Built and maintained web crawlers for a project called Digital Echo",
+                "Built and maintained web crawlers for a project called Digital Echo.",
                 "Implemented new techniques to improve the reusability of code for the crawlers.",
                 "Selected as the lead for a new project after only 2 months of employment."
             ]
@@ -64,7 +64,7 @@ export const cv = [{
     "category": "Outdoor",
     "gigs": [
         {
-            "title": "Camp Counselor | Medical Director",
+            "title": "Counselor | Medical Director",
             "company": "Stone Mountain Adventures",
             "description": [
                 "Prepared the camp's emergency medical supplies for the summer.",

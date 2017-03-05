@@ -7,14 +7,9 @@ export const Projects = ({ children }) => {
         <div className="projects page">
 
             { !children && 
-            <span><div className="page__header">
+            <div className="page__header">
                 <div className="page__title">Projects</div>
-            </div>
-            
-            <div className="projects__blurb page__blurb">
-                <p>"Oh wow! Sweet apps!"</p>
-                <p> - Everybody</p>
-            </div></span> }
+            </div> }
 
             { children && <div className="project">{children}</div> }
 
@@ -38,6 +33,17 @@ export const Projects = ({ children }) => {
                     <div className="project-preview__description">
                         <p>Learn the metric system with this minimalistic weather app that shows you the current weather for a given location in metric and imperial units.</p>
                         <p>Get a head start on learning that funky new Metric system the world keeps raving about.</p>
+                    </div>
+                
+                </div>
+
+                <div className="project-preview">
+
+                    <Link className="project-preview__link" activeClassName="project-preview__link--active" to="/projects/cellular-automaton-widget">Cellular Automaton Widget</Link>
+                    
+                    <div className="project-preview__description">
+                        <p>Cellular automata are interesting.</p>
+                        <p>Check it out.</p>
                     </div>
                 
                 </div>

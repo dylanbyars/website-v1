@@ -11,24 +11,11 @@ export const Experience = () => {
                 <div className="page__title">Experience</div>
             </div>
 
-            <div className="experience__blurb page__blurb">
-                <p>Take a look at what's been keeping me busy. If you think I'd make a nice fit for your team, <a className="inline-link" href="mailto:dylan@dylanbyars.com">send me a note!</a></p>
-            </div>
+            <div className="page__sub-header">Skills</div>
+            <span className="experience__skill-chart"><SkillChart /></span>
 
-            <div className="experience__sub-header">Skills</div>
-            <div className="experience__skill-chart">
-                <SkillChart />
-            </div>
-
-            <div className="experience__sub-header">Resume</div>
-            <div className="experience__resume">
-                <Resume />
-            </div>
-
-            {/*<div className="experience__sub-header">Volunteer</div>
-            <div className="experience__volunteer">
-                EMT
-            </div>*/}
+            <div className="page__sub-header">Resumé</div>
+            <Resume />
             
         </div>
     )

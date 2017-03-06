@@ -115,6 +115,7 @@ module.exports = {
         exclude: [
           /\.html$/,
           /\.(js|jsx)$/,
+          /\.scss$/,
           /\.css$/,
           /\.json$/,
           /\.svg$/
@@ -144,10 +145,14 @@ module.exports = {
       // tags. If you use code splitting, however, any async bundles will still
       // use the "style" loader inside the async code so CSS from them won't be
       // in the main CSS file.
+      // 
+      // Since I'm using Sass, I removed the css loader and replaced it with the below
+      // 
+      // Loader for SCSS files
       {
-        test: /\.css$/,
-        loader: ExtractTextPlugin.extract('style', 'css?importLoaders=1!postcss')
-        // Note: this won't work without `new ExtractTextPlugin()` in `plugins`.
+        test: /\.scss$/,
+        include: paths.appSrc,
+        loader: ExtractTextPlugin.extract('style-loader', 'css?importLoaders=1!postcss!sass-loader')
       },
       // JSON is not enabled by default in Webpack but both Node and Browserify
       // allow it implicitly so we also enable it.

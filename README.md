@@ -9,6 +9,6 @@ Todo:
 5. Figure out how to get the 404 page to display and write something pithy. 
 6. Setup react-helmet
 7. maybe setup react-snapshot
-8. Get rid of all the typography stuff I'm not actually using.
-9. remove the console.logs from the nav element
+8. ~~Get rid of all the typography stuff I'm not actually using.~~
+9. ~~remove the console.logs from the nav element~~
 10. lay and hide easter eggs

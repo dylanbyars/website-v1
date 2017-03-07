@@ -40,7 +40,6 @@ class Nav extends Component {
     }
 
     onResize(e) {
-        console.log('resized from Nav element')
         if (e.target.outerWidth > 450) {
             if (this.state.nav !== 'maxi') {
                 this.setState({nav: 'maxi'})

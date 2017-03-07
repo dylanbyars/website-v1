@@ -1,49 +1,18 @@
-// Home page nav and hustle font and full page nav font
-@import url('https://fonts.googleapis.com/css?family=Fjalla+One');
-
-// Font for my name in the header
-@import url('https://fonts.googleapis.com/css?family=Architects+Daughter');
-
-// Page headers
-@import url('https://fonts.googleapis.com/css?family=NTR|Nunito|Press+Start+2P|Rajdhani');
-
-// Page text
-@import url('https://fonts.googleapis.com/css?family=Nunito+Sans');
-
-///////////////////////////
-// Alts
-
-// Pair 1 -- Nunito = Title, Lora = Copy
-@import url('https://fonts.googleapis.com/css?family=Lora|Nunito+Sans:300,400');
-
-// Pair 2 -- Kreon = Title, Ubuntu = Copy
-@import url('https://fonts.googleapis.com/css?family=Kreon|Ubuntu');
-
-// pair 1
-// $font--title: 'Nunito Sans', sans-serif;
-// $font--content: 'Lora', sans-serif;
-
-// pair 2
-// $font--title: 'Kreon', serif;
-// $font--content: 'Ubuntu', sans-serif;
-
-//////////////////////////
-
-// Font variables
-// $font--nav-link: 'Fjalla One', sans-serif;
-// $font--home-hustle: 'Fjalla One', sans-serif;
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Kreon|Ubuntu|Nunito|Architects+Daughter');
 
 $font--nav-link: 'Kreon', serif;
+
 $font--home-hustle: 'Kreon', serif;
 
 $font--db: 'Architects Daughter', cursive;
 
-// $font--page-title: 'Rajdhani', sans-serif;
-// $font--page-title: 'NTR', sans-serif;
-// $font--page-title: 'Nunito', sans-serif;
 $font--page-title: 'Kreon', serif;
 
 $font--text: 'Ubuntu', sans-serif;
 
 $font--page-sub-header: 'Nunito', sans-serif;
+
+$font--weather-app: 'Nunito', sans-serif;
+
 $font--resume-section-title: 'Kreon', serif;

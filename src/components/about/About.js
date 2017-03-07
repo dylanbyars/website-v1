@@ -11,10 +11,7 @@ export const About = () => {
 
             <div className="page__sub-header">About me</div>
             <div className="about__section">
-                <div className="about__img">
-                    <img src="https://i.imgur.com/wDSPIvj.jpg" alt="Dylan"/>
-                    <p className="img-caption">* Me posing with world-renowned forehead model Gla Bella (right).</p>
-                </div>
+                <img className="about__img" src="http://i.imgur.com/5pxNy4u.jpg" alt="Dylan"/>
                 <p>Thanks for checking out my site!</p>
                 <br/>
                 <p>I'm an aspiring junior frontend web developer itching to join a team of pixel-pushers in the Northern Virginia/Washington D.C. area.</p>

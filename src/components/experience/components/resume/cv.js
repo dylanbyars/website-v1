@@ -5,18 +5,17 @@ export const cv = [{
             "title": "Data Collection Engineer",
             "company": "Leidos",
             "description": [
-                "Built and maintained web crawlers for a project called Digital Echo.",
-                "Implemented new techniques to improve the reusability of code for the crawlers.",
-                "Selected as the lead for a new project after only 2 months of employment."
+                "Designed, constructed, and maintained web crawlers for a project called Digital Echo.",
+                "Implemented new techniques to improve the reusability of the code our team used throughout the project.",
+                "Selected as the lead for a new project after only 2 months of employment demonstrating an ability to learn new technologies quickly."
             ]
         },
         {
-            "title": "Account Manager",
+            "title": "Senior Account Manager",
             "company": "Carahsoft Technology Corporation",
             "description": [
-                "Oversaw a portfolio of vendors offering new, innovative cyber security solutions.",
-                "Introduced vendors to the federal marketplace.",
-                "Coordinated marketing campaigns, generated interest, and managed contract negotiations with customers."
+                "Introduced technology companies offering innovative cybersecurity solutions to the federal market place, coordinated targeted marketing campaigns, and managed contract negotiations between customers and vendors.",
+                "Specialized in encryption technologies, database scanning and remediation tools, threat intelligence managers, and web application firewalls."
             ]
         },
         {
@@ -67,9 +66,8 @@ export const cv = [{
             "title": "Counselor | Medical Director",
             "company": "Stone Mountain Adventures",
             "description": [
-                "Prepared the camp's emergency medical supplies for the summer.",
-                "Led small workshops with fellow counselors demonstrating basic first aid techniques.",
-                "Primarily ran music workshops and sailing classes for campers."
+                "Ran music workshops and sailing classes for campers.",
+                "Led workshops with fellow counselors to demonstrate basic first aid techniques increasing the staff’s ability to manage minor medical traumas and boosting confidence levels.",
             ]
         },
         {

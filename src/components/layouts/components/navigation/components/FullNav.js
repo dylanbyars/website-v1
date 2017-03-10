@@ -10,13 +10,13 @@ export const FullNav = ({ navItems }) => {
     })
     
     return (
-        <div className="full-nav">
+        <nav className="full-nav">
             <div className="full-nav__links">
                 {links}
             </div>
             <div className="full-nav__home">
                 <Link className="home__link" to="/">Dylan Byars</Link>
             </div>
-        </div>
+        </nav>
     )
 }

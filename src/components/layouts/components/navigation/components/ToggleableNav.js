@@ -47,29 +47,29 @@ class ToggleableNav extends Component {
     
     if (this.state.menuOpen) {
       return (
-        <div className="toggleable-nav nav-toggle--open">
+        <nav className="toggleable-nav nav-toggle--open">
         
           <span className="nav-toggle__button" onClick={this.toggleMenu}></span>
 
-          <nav className="nav__items--mini">
+          <div className="nav__items--mini">
             {links}
-          </nav>
+          </div>
           
           <div className="back-drop" onClick={this.toggleMenu}></div>
         
-      </div>
+      </nav>
       )
     } else {
       return (
-        <div className="toggleable-nav nav-toggle--closed">
+        <nav className="toggleable-nav nav-toggle--closed">
         
           <span className="nav-toggle__button" onClick={this.toggleMenu}></span>
 
-          <nav className="nav__items--mini">
+          <div className="nav__items--mini">
             {links}
-          </nav>
+          </div>
         
-      </div>
+      </nav>
       )
     }
 

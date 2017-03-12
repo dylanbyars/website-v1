@@ -16,6 +16,8 @@
   justify-content: space-around;
   align-items: center;
   padding: 3vw 1vw;
+  background-color: rgba(228, 232, 226, 0.6);
+  border-radius: 2px;
 }
 
 .home__nav-link {
@@ -62,10 +64,6 @@
 }
 
 @media screen and (min-width: 760px) {
-
-  .home {
-
-  }
 
   .home__db {
     padding: 1vw;

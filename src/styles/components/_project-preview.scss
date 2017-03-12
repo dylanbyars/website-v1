@@ -1,0 +1,59 @@
+// ProjectPreview styles
+
+.project-preview {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 275px;
+    margin: 2.5vh 0;
+    padding: 5%;
+    background-color: $white;
+    border-radius: 3px;
+}
+
+.project-preview__link,
+.project-preview__code-link {
+    font-size: 18px;
+    color: $black;
+    padding: 9px;
+    border-radius: 2px;
+    transition: 150ms;
+
+    &:hover {
+      color: $white;
+      background-color: $dark-blue;
+    }
+}
+
+.project-preview__link--active {
+  font-size: 25px;
+  color: $dark-blue;
+}
+
+.project-preview__description {
+    line-height: 1.44;
+}
+
+.project-preview__description > p {
+    margin: 3vh 0;
+
+    &:last-child {
+      margin-bottom: 45px;
+    }
+}
+
+.project-preview__code-link {
+  position: absolute;
+  bottom: 25px;
+  right: 25px;
+}
+
+@media screen and (min-width: 760px) {
+  .project-preview {
+    max-width: 25vw;
+    padding: 2.5%;
+  }
+
+}

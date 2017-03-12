@@ -4,11 +4,6 @@ export const About = () => {
     return (
         <div className="about page">
 
-            <div className="page__sub-header">About this site</div>
-            <div className="about__section">
-                <p>Stay tuned for a detailed write up all about putting this website together.</p>
-            </div>
-
             <div className="page__sub-header">About me</div>
             <div className="about__section">
                 <img className="about__img" src="http://i.imgur.com/5pxNy4u.jpg" alt="Dylan"/>
@@ -17,6 +12,11 @@ export const About = () => {
                 <p>I'm an aspiring junior frontend web developer itching to join a team of pixel-pushers in the Northern Virginia/Washington D.C. area.</p>
                 <br/>
                 <p>If you think I'd make a nice addition to your team, please <a className="inline-link" href="mailto:dylan@dylanbyars.com">send me a note!</a></p>
+            </div>
+
+            <div className="page__sub-header">About this site</div>
+            <div className="about__section">
+                <p>Stay tuned for a detailed write up all about putting this website together.</p>
             </div>
 
             {/*<div className="about__write-up page__blurb">

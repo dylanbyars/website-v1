@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
 import { Router, Route, IndexRoute, browserHistory } from 'react-router';
+import ReactGA from 'react-ga';
+
 import { HomeLayout } from './components/layouts/HomeLayout';
 import { RootLayout } from './components/layouts/RootLayout';
 import { Home } from './components/home/Home';
@@ -13,10 +15,23 @@ import { About } from './components/about/About';
 import './styles/main.scss';
 
 class SweetWebsite extends Component {
+
+  componentDidMount() {
+    // Initialize the google analytics element
+    ReactGA.initialize('UA-83304510-1');
+  }
+
+  // a function that fires a tracking event to the google analytics element when the route changes
+  logPageView() {
+    ReactGA.set({ page: window.location.pathname });
+    ReactGA.pageview(window.location.pathname);
+  }
+
   render() {
+
     return (
 
-      <Router history={browserHistory}>
+      <Router history={browserHistory} onUpdate={this.logPageView}>
         <Route path="/" component={HomeLayout}>
           <IndexRoute component={Home} />
           <Route component={RootLayout}>

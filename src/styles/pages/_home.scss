@@ -28,6 +28,8 @@
   letter-spacing: 0.8vw;
 }
 
+// also adding a pseudo element before so that the nav link still remains vertically centered in the nav area
+.home__nav-link:before,
 .home__nav-link:after {
   content: "";
   display: block;

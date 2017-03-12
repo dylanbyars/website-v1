@@ -23,6 +23,8 @@ export const Projects = ({ children }) => {
                         <p>A periodic table web app that connects users with elemental data from Wikipedia through a slick user interface.</p>
                         <p>Looks best on desktops or mobile screens flipped to landscape mode.</p>
                     </div>
+
+                    <a href="https://github.com/dbyars/dylan-byars-v2/blob/master/src/components/projects/components/periodic-table-app/PeriodicTableApp.js" className="project-preview__code-link">Code</a>
                     
                 </div>
                 
@@ -34,6 +36,8 @@ export const Projects = ({ children }) => {
                         <p>Learn the metric system with this minimalistic weather app that shows you the current weather for a given location in metric and imperial units.</p>
                         <p>Get a head start on learning that funky new Metric system the world keeps raving about.</p>
                     </div>
+
+                    <a href="https://github.com/dbyars/dylan-byars-v2/blob/master/src/components/projects/components/weather-app/WeatherApp.js" className="project-preview__code-link">Code</a>
                 
                 </div>
 
@@ -45,6 +49,8 @@ export const Projects = ({ children }) => {
                         <p>Cellular automata are interesting.</p>
                         <p>Check it out.</p>
                     </div>
+
+                    <a href="https://github.com/dbyars/dylan-byars-v2/blob/master/src/components/projects/components/cellular-automaton-widget/CellularAutomaton.js" className="project-preview__code-link">Code</a>
                 
                 </div>
 

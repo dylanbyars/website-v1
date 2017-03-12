@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router';
+import { ProjectPreview } from './components/ProjectPreview'
 
 export const Projects = ({ children }) => {
 
@@ -15,44 +15,20 @@ export const Projects = ({ children }) => {
 
             <div className="projects__nav">
 
-                <div className="project-preview">
+                <ProjectPreview projectLink="/projects/periodic-table-app" projectName="Periodic Table App" codeLink="https://github.com/dbyars/dylan-byars-v2/blob/master/src/components/projects/components/periodic-table-app/PeriodicTableApp.js">
+                    <p>A periodic table web app that connects users with elemental data from Wikipedia through a slick user interface.</p>
+                    <p>Looks best on desktops or mobile screens flipped to landscape mode.</p>
+                </ProjectPreview>
 
-                    <Link className="project-preview__link" activeClassName="project-preview__link--active" to="/projects/periodic-table-app">Periodic Table App</Link>
-                    
-                    <div className="project-preview__description">
-                        <p>A periodic table web app that connects users with elemental data from Wikipedia through a slick user interface.</p>
-                        <p>Looks best on desktops or mobile screens flipped to landscape mode.</p>
-                    </div>
+                <ProjectPreview projectLink="/projects/weather-app" projectName="Weather App" codeLink="https://github.com/dbyars/dylan-byars-v2/blob/master/src/components/projects/components/weather-app/WeatherApp.js">
+                    <p>Learn the metric system with this minimalistic weather app that shows you the current weather for a given location in metric and imperial units.</p>
+                    <p>Get a head start on learning that funky new Metric system the world keeps raving about.</p>
+                </ProjectPreview>
 
-                    <a href="https://github.com/dbyars/dylan-byars-v2/blob/master/src/components/projects/components/periodic-table-app/PeriodicTableApp.js" className="project-preview__code-link">Code</a>
-                    
-                </div>
-                
-                <div className="project-preview">
-
-                    <Link className="project-preview__link" activeClassName="project-preview__link--active" to="/projects/weather-app">Weather App</Link>
-                    
-                    <div className="project-preview__description">
-                        <p>Learn the metric system with this minimalistic weather app that shows you the current weather for a given location in metric and imperial units.</p>
-                        <p>Get a head start on learning that funky new Metric system the world keeps raving about.</p>
-                    </div>
-
-                    <a href="https://github.com/dbyars/dylan-byars-v2/blob/master/src/components/projects/components/weather-app/WeatherApp.js" className="project-preview__code-link">Code</a>
-                
-                </div>
-
-                <div className="project-preview">
-
-                    <Link className="project-preview__link" activeClassName="project-preview__link--active" to="/projects/cellular-automaton-widget">Cellular Automaton Widget</Link>
-                    
-                    <div className="project-preview__description">
-                        <p>Cellular automata are interesting.</p>
-                        <p>Check it out.</p>
-                    </div>
-
-                    <a href="https://github.com/dbyars/dylan-byars-v2/blob/master/src/components/projects/components/cellular-automaton-widget/CellularAutomaton.js" className="project-preview__code-link">Code</a>
-                
-                </div>
+                <ProjectPreview projectLink="/projects/cellular-automaton-widget" projectName="Cellular Automaton Widget" codeLink="https://github.com/dbyars/dylan-byars-v2/blob/master/src/components/projects/components/cellular-automaton-widget/CellularAutomaton.js">
+                    <p>Cellular automata are interesting.</p>
+                    <p>Check it out.</p>
+                </ProjectPreview>
 
             </div>
 

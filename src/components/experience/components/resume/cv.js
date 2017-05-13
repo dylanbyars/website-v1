@@ -2,6 +2,14 @@ export const cv = [{
     "category": "Technology",
     "gigs": [
         {
+            "title": "JavaScript Developer",
+            "company": "MicroHealth LLC",
+            "description": [
+                "Remediated inherited software issues on an application built to support Department of Defense and Veterans Affairs officials as they coordinated medical care for wounded soldiers.",
+                "Created engaging, interactive features and redesigned existing UIs to improve the overall user experience and increase user productivity."
+            ]
+        },
+        {
             "title": "Data Collection Engineer",
             "company": "Leidos",
             "description": [
@@ -16,14 +24,6 @@ export const cv = [{
             "description": [
                 "Introduced technology companies offering innovative cybersecurity solutions to the federal market place, coordinated targeted marketing campaigns, and managed contract negotiations between customers and vendors.",
                 "Specialized in encryption technologies, database scanning and remediation tools, threat intelligence managers, and web application firewalls."
-            ]
-        },
-        {
-            "title": "Medical Records Technician",
-            "company": "Capitol Gastroenterology Consultants",
-            "description": [
-                "Managed a modernization project for digitizing patient records.",
-                "Assisted with customer service requests."
             ]
         }
     ]

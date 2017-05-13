@@ -15,23 +15,23 @@ class SkillChart extends Component {
         }, {
           "CSS3 / SCSS": "virtuoso"
         }, {
-          "Javascript": "cozy"
+          "JavaScript": "cozy"
         }, {
           "React": "cozy"
         }, {
           "Redux": "learning"
         }, {
-          "Polymer": "learning"
+          "Angular": "learning"
         }, {
-          "Firebase": "fiddled"
+          "TypeScript": "learning"
         }, {
-          "Git": "cozy"
+          "Git / SVN": "cozy"
         }, {
           "jQuery": "learning"
         }, {
           "Webpack": "learning"
         }, {
-          "Bower": "fiddled"
+          "Spring / JSP / JSTL": "fiddled"
         }, {
           "Node.js": "learning"
         }, {

@@ -37,7 +37,19 @@ $color--inline-link-hovered: $dark-red;
   margin-bottom: 5vh;
   margin-left: 5vw;
   color: $black;
-  border-bottom: 2px solid rgba(0, 0, 0, 0.4);
+  // border-bottom: 2px solid rgba(0, 0, 0, 0.4);
+}
+
+.section__skill-chart {
+  min-height: 550px;
+}
+
+.projects_nav {
+  display: flex;
+  width: 100vw;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .inline-link {
@@ -58,6 +70,11 @@ $color--inline-link-hovered: $dark-red;
 
   .page__sub-header {
     font-size: 7vw;
+  }
+
+  .projects_nav {
+    flex-direction: row;
+
   }
 
 }

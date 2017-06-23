@@ -31,7 +31,7 @@ class SkillChart extends Component {
         }, {
           "Webpack": "learning"
         }, {
-          "Spring / JSP / JSTL": "fiddled"
+          "Spring / JSP": "cozy"
         }, {
           "Node.js": "learning"
         }, {
@@ -41,30 +41,30 @@ class SkillChart extends Component {
         }, {
           "Python": "fiddled"
         }],
-        // scrolled: false
+        scrolled: false
       }
 
-      // this.scrolled = this.scrolled.bind(this)
+      this.scrolled = this.scrolled.bind(this)
   }
 
-  // componentDidMount() {
-  //   // adding a debounced event listener so that the bars aren't actually displayed until the user starts scrolling on the page
-  //   window.addEventListener('scroll', debounce(this.scrolled, 150, {leading: true, trailing: false}))
-  // }
+  componentDidMount() {
+    // adding a debounced event listener so that the bars aren't actually displayed until the user starts scrolling on the page
+    window.addEventListener('scroll', debounce(this.scrolled, 150, {leading: true, trailing: false}))
+  }
 
-  // scrolled() {
-  //   console.log('scroll fired from experience')
-  //   if (!this.state.scrolled) {
-  //     this.setState({scrolled: true})
-  //   }
-  //   // remove the event listener since they've already seen the action the event listener was waiting for. 
-  //   // Not working for some reason...
-  //   window.removeEventListener('scroll', debounce(this.scrolled, 150, {leading: true, trailing: false}))
-  // }
+  scrolled() {
+    console.log('scroll fired from experience')
+    if (!this.state.scrolled) {
+      this.setState({scrolled: true})
+    }
+    // remove the event listener since they've already seen the action the event listener was waiting for. 
+    // Not working for some reason...
+    window.removeEventListener('scroll', debounce(this.scrolled, 150, {leading: true, trailing: false}))
+  }
 
   render() {
 
-    /*if (!this.state.scrolled) {
+    if (!this.state.scrolled) {
       return null
     } else {
       const skillBars = () => {
@@ -88,28 +88,28 @@ class SkillChart extends Component {
         </div>
       )
 
-    }*/
+    }
 
-    const skillBars = () => {
-        let delay = 0
-        return this.state.skills.map(skill => {
-          let tech = Object.keys(skill)[0]
-          let prow = skill[tech]
-          delay += .15
-          return (
-            <ReactTransitionGroup key={`${tech}${delay}`}>
-              <SkillBar technology={tech} prowess={prow} delay={delay} />
-            </ReactTransitionGroup>
-          )
-        })
-      }
+    // const skillBars = () => {
+    //     let delay = 0
+    //     return this.state.skills.map(skill => {
+    //       let tech = Object.keys(skill)[0]
+    //       let prow = skill[tech]
+    //       delay += .15
+    //       return (
+    //         <ReactTransitionGroup key={`${tech}${delay}`}>
+    //           <SkillBar technology={tech} prowess={prow} delay={delay} />
+    //         </ReactTransitionGroup>
+    //       )
+    //     })
+    //   }
 
-      return (
-        <div className="skill-chart">
-          {skillBars()}
-          <Key />
-        </div>
-      )
+    //   return (
+    //     <div className="skill-chart">
+    //       {skillBars()}
+    //       <Key />
+    //     </div>
+    //   )
 
   }
 }

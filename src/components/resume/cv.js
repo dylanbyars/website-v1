@@ -5,8 +5,9 @@ export const cv = [{
             "title": "JavaScript Developer",
             "company": "MicroHealth LLC",
             "description": [
-                "Remediated inherited software issues on an application built to support Department of Defense and Veterans Affairs officials as they coordinated medical care for wounded soldiers.",
-                "Created engaging, interactive features and redesigned existing UIs to improve the overall user experience and increase user productivity."
+                "Designed and built user interfaces for a web application used worldwide by the DoD and VA to manage patient care plans.", 
+                "Improved application performance by optimizing client-side operations and organizing dependency loading.",
+                "Participated in the interview process by assessing candidates' knowledge of frontend technologies."
             ]
         },
         {

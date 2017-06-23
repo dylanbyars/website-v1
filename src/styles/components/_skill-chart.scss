@@ -15,11 +15,13 @@ $color--sc-virtuoso: #BAFF29;
   position: relative;
   width: 98%;
   height: 95%;
+  min-height: 650px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   font-family: $font--text;
   animation: fadein 2s;
+  border: 1px solid white;
 }
 
 // an animation to fade the whole skill-chart widget in when it's mounted to the page

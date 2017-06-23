@@ -1,22 +1,13 @@
 @charset 'UTF-8';
 
-// Variables / Functions / Mixins
-@import 'abstracts/glob';
-
 // Base stuff
 @import 'base/glob';
 
 // Components
 @import 'components/glob';
 
-// Layouts
-@import 'layouts/glob';
-
 // Page-specific styles
 @import 'pages/glob';
-
-// Themes
-@import 'themes/glob';
 
 // Shame
 @import '/shame';

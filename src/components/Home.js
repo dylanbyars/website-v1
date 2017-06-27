@@ -1,5 +1,6 @@
 import React from 'react';
 
+import CellularAutomaton from './cellular-automaton-widget/CellularAutomaton';
 import SkillChart from './skill-chart/SkillChart';
 import { ProjectPreview } from './projects/ProjectPreview';
 import { Resume } from './resume/Resume';
@@ -14,23 +15,30 @@ export const Home = () => {
 
                 <div className="home__db">Dylan Byars</div>
 
-                <div className="home__hustle">frontend web developer</div>
+                <div className="home__hustle">
+                    <h2>frontend</h2>
+                    <h2>developer</h2>
+                </div>
                 
             </header>
 
             <div className="home__content">
 
-                <section className="section__skill-chart">
+                <section className="section section__skill-chart">
                     
-                    <p className="page__sub-header">Skills</p>
+                    <p className="section__sub-header">Skills</p>
                     
                     <SkillChart />
 
                 </section>
-                
-                <section className="section__projects">
 
-                    <p className="page__sub-header">Projects</p>
+                <div className="page-break">
+                    <CellularAutomaton />
+                </div>
+                
+                <section className="section section__projects">
+
+                    <p className="section__sub-header">Projects</p>
 
                     <div className="projects__nav">
 
@@ -44,20 +52,21 @@ export const Home = () => {
                             <p>Get a head start on learning that funky new Metric system the world keeps raving about.</p>
                         </ProjectPreview>
 
-                        <ProjectPreview projectLink="/cellular-automaton-widget" projectName="Cellular Automaton Widget" codeLink="https://github.com/dbyars/dylan-byars-v2/blob/master/src/components/projects/components/cellular-automaton-widget/CellularAutomaton.js">
-                            <p>Cellular automata are interesting.</p>
-                            <p>Check it out.</p>
-                        </ProjectPreview>
-
                     </div>
 
                 </section>
 
-                
+                <div className="page-break">
+                    <CellularAutomaton />
+                </div>
 
-                <p className="page__sub-header">Experience</p>
+                <section className="section section__experience">
 
-                <Resume />
+                    <p className="section__sub-header">Experience</p>
+
+                    <Resume />
+
+                </section>
 
             </div>
 

@@ -4,6 +4,7 @@ export const cv = [{
         {
             "title": "JavaScript Developer",
             "company": "MicroHealth LLC",
+            "companySite": "https://microhealthllc.com/",
             "description": [
                 "Designed and built user interfaces for a web application used worldwide by the DoD and VA to manage patient care plans.", 
                 "Improved application performance by optimizing client-side operations and organizing dependency loading.",
@@ -13,6 +14,7 @@ export const cv = [{
         {
             "title": "Data Collection Engineer",
             "company": "Leidos",
+            "companySite": "https://www.leidos.com/national-security/cybersecurity/solutions/digital-echo",
             "description": [
                 "Designed, constructed, and maintained web crawlers for a project called Digital Echo.",
                 "Implemented new techniques to improve the reusability of the code our team used throughout the project.",
@@ -22,6 +24,7 @@ export const cv = [{
         {
             "title": "Senior Account Manager",
             "company": "Carahsoft Technology Corporation",
+            "companySite": "http://carahsoft.com/",
             "description": [
                 "Introduced technology companies offering innovative cybersecurity solutions to the federal market place, coordinated targeted marketing campaigns, and managed contract negotiations between customers and vendors.",
                 "Specialized in encryption technologies, database scanning and remediation tools, threat intelligence managers, and web application firewalls."

@@ -5,7 +5,7 @@ import { cv } from './cv';
 export const Resume = () => {
     const resume = cv.map((section, index) => {
 
-        const gigs = section.gigs.map(({ title, company, description }) => <Gig title={title} company={company} description={description} />)
+        const gigs = section.gigs.map(({ title, company, companySite, description }) => <Gig title={title} company={company} companySite={companySite} description={description} />)
 
         return (
             <div className="resume__section">

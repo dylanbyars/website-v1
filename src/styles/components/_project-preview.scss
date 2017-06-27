@@ -6,16 +6,17 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    max-width: 275px;
+    width: 85vw;
     margin: 2.5vh 0;
     padding: 5%;
     background-color: $white;
     border-radius: 3px;
+    // border: 1px solid black;
 }
 
 .project-preview__link,
 .project-preview__code-link {
-    font-size: 18px;
+    font-size: 7vw;
     color: $black;
     padding: 9px;
     border-radius: 2px;
@@ -28,7 +29,7 @@
 }
 
 .project-preview__link--active {
-  font-size: 25px;
+  font-size: 7.9vw;
   color: $dark-blue;
 }
 
@@ -38,9 +39,10 @@
 
 .project-preview__description > p {
     margin: 3vh 0;
+    font-size: 5.9vw;
 
     &:last-child {
-      margin-bottom: 45px;
+      margin-bottom: 55px;
     }
 }
 
@@ -50,10 +52,34 @@
   right: 25px;
 }
 
+@media screen and (min-width: 500px) {
+  .project-preview {
+    max-width: 365px;
+  }
+
+  .project-preview__description > p {
+    font-size: 3.1vw;
+  }
+
+  .project-preview__link,
+  .project-preview__code-link {
+    font-size: 3.5vw;
+  }
+}
+
 @media screen and (min-width: 760px) {
   .project-preview {
-    max-width: 25vw;
+    max-width: 35vw;
     padding: 2.5%;
+  }
+
+  .project-preview__description > p {
+    font-size: 1.9vw;
+  }
+
+  .project-preview__link,
+  .project-preview__code-link {
+    font-size: 2.5vw;
   }
 
 }

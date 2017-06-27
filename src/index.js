@@ -7,7 +7,6 @@ import { Home } from './components/Home';
 import { Project } from './components/projects/Project';
 import PeriodicTableApp from './components/projects/components/periodic-table-app/PeriodicTableApp';
 import WeatherApp from './components/projects/components/weather-app/WeatherApp';
-import CellularAutomaton from './components/projects/components/cellular-automaton-widget/CellularAutomaton';
 import './styles/main.scss';
 
 class SweetWebsite extends Component {
@@ -32,7 +31,6 @@ class SweetWebsite extends Component {
         <Route component={Project}>
           <Route path="periodic-table-app" component={PeriodicTableApp} />
           <Route path="weather-app" component={WeatherApp} />
-          <Route path="cellular-automaton-widget" component={CellularAutomaton} />
         </Route>
       </Router>
 

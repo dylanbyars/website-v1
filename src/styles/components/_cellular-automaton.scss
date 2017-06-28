@@ -1,5 +1,5 @@
-$color--cell-active: #7EC4CF;
-$color--cell-inactive: #F92A82;
+$color--cell-active:#7c7c7c;
+$color--cell-inactive: #75E5A5;
 
 .generations {
   display: flex;
@@ -21,7 +21,8 @@ $color--cell-inactive: #F92A82;
 }
 
 .active {
-  background-color: $color--cell-active; 
+  background-color: transparent;
+  opacity: 0%;
 }
 
 .inactive {

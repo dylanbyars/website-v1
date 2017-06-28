@@ -1,30 +1,25 @@
 import React from 'react';
 
-// icons
-import codepenLogo from '../icons/codepen-logo--border.svg';
-import githubLogo from '../icons/github-logo.svg';
-import linkedinLogo from '../icons/linkedin-logo.svg';
-
 export const Footer = () => {
 
     return (
 
         <footer className="footer">
 
-            <p className="footer__email">dylan@dylanbyars.com</p>
+            <h2 className="footer__email">dylan@dylanbyars.com</h2>
             
             <div className="footer__social-media">
 
                 <div className="footer__social-item">
-                    <a href="https://www.github.com/dbyars"><img className="footer__social-img" src={githubLogo} alt="Github Logo" /></a>
+                    <a href="https://www.github.com/dbyars"><i className="fa fa-github fa-3x footer__social-img" alt="Github Logo" /></a>
                 </div>
 
                 <div className="footer__social-item">
-                    <a href="https://www.codepen.io/dylanbyars"><img className="footer__social-img" src={codepenLogo} alt="Codepen Logo" /></a>
+                    <a href="https://www.codepen.io/dylanbyars"><i className="fa fa-codepen fa-3x footer__social-img" alt="Codepen Logo" /></a>
                 </div>
 
                 <div className="footer__social-item">
-                    <a href="https://www.linkedin.com/in/dylanbyars"><img className="footer__social-img" src={linkedinLogo} alt="LinkedIn Logo" /></a>
+                    <a href="https://www.linkedin.com/in/dylanbyars"><i className="fa fa-linkedin-square fa-3x footer__social-img" alt="LinkedIn Logo" /></a>
                 </div>
 
             </div>

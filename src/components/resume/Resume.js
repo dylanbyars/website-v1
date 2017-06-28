@@ -9,7 +9,7 @@ export const Resume = () => {
 
         return (
             <div className="resume__section">
-                <div className="section__category">{section.category}</div>
+                <h3 className="section__category">{section.category}</h3>
                 <div className="section__gigs">{gigs}</div>
             </div>
         )

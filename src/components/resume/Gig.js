@@ -4,7 +4,7 @@ export const Gig = ({ title, company, companySite, description }) => {
 
     const companyTitle = () => {
         if (companySite) {
-            return <div><a className="gig__company" href={companySite}>{company}</a></div>
+            return <div className="gig__company"><a href={companySite}>{company}<i className="fa fa-external-link" /></a></div>
         } else {
             return <div className="gig__company">{company}</div>
         }
@@ -16,8 +16,10 @@ export const Gig = ({ title, company, companySite, description }) => {
 
     return (
         <div className="gig">
-            <div className="gig__title">{title}</div>
-            {companyTitle()}
+            <div className="gig__header">
+                <h4 className="gig__title">{title}</h4>
+                {companyTitle()}
+            </div>
             <ul className="gig__descriptions">{jobDescriptions}</ul>
         </div>
     )

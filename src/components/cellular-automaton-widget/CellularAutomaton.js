@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import debounce from 'lodash/debounce';
+
 import { Generation } from './Generation';
 
 class CellularAutomaton extends Component {
@@ -152,7 +154,7 @@ class CellularAutomaton extends Component {
     generations.push(initialCellStates)
     
     // On initial render, build a quarter page's-worth of rows
-    let rows = Math.floor((window.innerHeight / 12) /4);
+    let rows = Math.floor((window.innerHeight / 12) /5);
     
     for (let i = 0; i < rows; i++) {
       generations.push(this.nextGeneration(generations[i]))
@@ -163,12 +165,14 @@ class CellularAutomaton extends Component {
   
   componentDidMount() {
     setInterval(this.generationInterval, 750)
-    window.addEventListener('resize', this.handleResize)
+    // adding a debounce function to the event listener so that the window resize event isn't called constantly while the window's actually being resized.
+    window.addEventListener('resize', debounce(this.handleResize, 300, {leading: true, trailing: true}))
   }
   
   componentWillUnmount() {
     clearInterval(this.generationInterval)
-    window.removeEventListener('resize', this.handleResize)
+    // remove event listener
+    window.removeEventListener('resize', debounce(this.handleResize, 300, {leading: true, trailing: true}))
   }
 
   render() {

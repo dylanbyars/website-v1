@@ -1,5 +1,5 @@
 // Fonts
-@import url('https://fonts.googleapis.com/css?family=Kreon|Ubuntu|Nunito|Architects+Daughter');
+@import url('https://fonts.googleapis.com/css?family=Kreon|Zilla+Slab|Nunito|Architects+Daughter');
 
 $font--nav-link: 'Kreon', serif;
 
@@ -9,10 +9,20 @@ $font--db: 'Architects Daughter', cursive;
 
 $font--page-title: 'Kreon', serif;
 
-$font--text: 'Ubuntu', sans-serif;
+$font--text: 'Zilla Slab', serif;
 
-$font--page-sub-header: 'Nunito', sans-serif;
+$font--section-sub-header: 'Nunito', sans-serif;
 
 $font--weather-app: 'Nunito', sans-serif;
 
 $font--resume-section-title: 'Kreon', serif;
+
+$font--resume-gig: 'Nunito', sans-serif;
+
+// h2 {
+//     font-size: 17vw;
+// }
+
+// h3 {
+//     font-size: 7vw;
+// }

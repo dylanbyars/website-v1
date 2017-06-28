@@ -3,7 +3,7 @@ export const cv = [{
     "gigs": [
         {
             "title": "JavaScript Developer",
-            "company": "MicroHealth LLC",
+            "company": "MicroHealth",
             "companySite": "https://microhealthllc.com/",
             "description": [
                 "Designed and built user interfaces for a web application used worldwide by the DoD and VA to manage patient care plans.", 
@@ -16,14 +16,14 @@ export const cv = [{
             "company": "Leidos",
             "companySite": "https://www.leidos.com/national-security/cybersecurity/solutions/digital-echo",
             "description": [
-                "Designed, constructed, and maintained web crawlers for a project called Digital Echo.",
+                "Constructed and maintained web crawlers for a project called Digital Echo.",
                 "Implemented new techniques to improve the reusability of the code our team used throughout the project.",
                 "Selected as the lead for a new project after only 2 months of employment demonstrating an ability to learn new technologies quickly."
             ]
         },
         {
             "title": "Senior Account Manager",
-            "company": "Carahsoft Technology Corporation",
+            "company": "Carahsoft",
             "companySite": "http://carahsoft.com/",
             "description": [
                 "Introduced technology companies offering innovative cybersecurity solutions to the federal market place, coordinated targeted marketing campaigns, and managed contract negotiations between customers and vendors.",
@@ -46,7 +46,7 @@ export const cv = [{
         },
         {
             "title": "Substitute Teacher",
-            "company": "Fairfax County Public Schools",
+            "company": "FCPS",
             "description": [
                 "Taught science and math classes for absent teachers.",
                 "Developed rapport with students quickly to make lessons interesting."
@@ -54,7 +54,7 @@ export const cv = [{
         },
         {
             "title": "Game Master | Party Guy",
-            "company": "Shadowland Laser Adventures",
+            "company": "Shadowland Laser Tag",
             "description": [
                 "Supervised teams playing laser tag and helped troubleshoot hardware malfunctions in the arena.",
                 "Hosted parties by doling out pizza and cake.",
@@ -67,7 +67,7 @@ export const cv = [{
     "category": "Outdoor",
     "gigs": [
         {
-            "title": "Counselor | Medical Director",
+            "title": "Counselor | Medic",
             "company": "Stone Mountain Adventures",
             "description": [
                 "Ran music workshops and sailing classes for campers.",
@@ -79,7 +79,7 @@ export const cv = [{
             "company": "Edith J. Carrier Arboretum",
             "description": [
                 "Ran numerous improvement projects around the grounds.",
-                "Developed a healthy respect for poison ivy."
+                "Cultivated a healthy respect for poison ivy."
             ]
         }
     ]

@@ -1,6 +1,6 @@
 /* Footer Element Styles */
 
-$height--footer: 200px;
+$height--footer: 35vh;
 
 .footer {
   position: absolute;
@@ -13,6 +13,8 @@ $height--footer: 200px;
   align-items: center;
   justify-content: space-between;
   background-color: rgba(228, 232, 226, 0.6);
+  border-top-left-radius: 50% 40%;
+  border-top-right-radius: 50% 40%;
 }
 
 .footer__email {
@@ -20,6 +22,7 @@ $height--footer: 200px;
   justify-content: center;
   align-items: center;
   padding-top: 30px;
+  font-family: $font--text;
 }
 
 .footer__social-media {
@@ -31,10 +34,14 @@ $height--footer: 200px;
 
 .footer__social-item {
   perspective: 1100px;
+
+  & > a {
+    color: $black;
+  }
+
 }
 
 .footer__social-img {
-  height: 45px;
   filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.35));
   transition: 200ms;
 }
@@ -61,10 +68,18 @@ $height--footer: 200px;
 
 }
 
-@media screen and (min-width: 450px) {
+@media screen and (min-width: 500px) {
+
+  .footer {
+    height: 35vh;
+  }
 
   .footer__social-media {
-    width: 45%;
+    width: 55%;
+  }
+
+  .footer__social-item > a {
+    font-size: 1.4em;
   }
 
   .footer__thanks {

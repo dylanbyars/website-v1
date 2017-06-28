@@ -1,43 +1,48 @@
 // Resume element styles
 
 .resume {
-    
+    margin-top: 8vh;
 }
 
 .resume__section {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: space-between;
-    margin: 2vh 8vw 4vh;
-    border: $gray;
+    align-items: space-around;
+    margin: 2vh 4vw;
+    // border: 1px solid white;;
 }
 
 .section__category {
     margin-right: 5vw;
-    margin-bottom: 3vh;
     font-size: 10vw;
     align-self: flex-end;
     font-family: $font--resume-section-title;
+    // border: 1px solid white;
 }
 
 .section__gigs {
     display: flex;
     flex-direction: column;
     align-items: space-between;
-    padding: 6vh 0;
+    padding-top: 6vh;
     border-radius: 3px;
 }
 
 .gig {
-    margin: 2vh;
+    margin: 2vh 0;
     background-color: $white;
     padding: 3vmin;
     border-radius: 4px;
 }
 
+.gig:last-of-type {
+    margin-bottom: 5vh;
+}
+
 .gig__title {
-    font-size: 22px;
+    font-size: 7vw;
+    font-family: $font--resume-gig;
     margin: 2vh 0;
     display: inline-block;
     padding-bottom: 1vh;
@@ -45,18 +50,48 @@
 }
 
 .gig__company {
-    font-size: 19px;
+    font-size: 6vw;
+    font-family: $font--resume-gig;
     margin: 2vh 0 4vh;
+
+    & i {
+        margin-left: 2vw;
+    }
+}
+
+.gig__company a {
+    color: $black;
+    padding: 1vh 3vw;
+    text-decoration: none;
+    border-radius: 9px;
+    transition: 150ms;
+    background-color: lighten($dark-blue, 40%);
+
+    &:hover {
+      color: $white;
+      background-color: $dark-blue;
+    }
+
+    > i {
+      margin-left: 4vw;
+      font-size: 4.8vw;
+    }
+}
+
+.project-preview__link--active {
+  font-size: 7.9vw;
+  color: $dark-blue;
 }
 
 .gig__descriptions {
-    font-size: 16px;
     list-style-type: none;
 }
 
 .gig__description {
-    margin: 2vh 0;
-    line-height: 1.4;
+    margin: 2vh 0 4vh;
+    line-height: 1.42;
+    font-family: $font--text;
+    font-size: 5vw;
 }
 
 @media screen and (min-width: 450px) {
@@ -65,23 +100,48 @@
         font-size: 3.5vw;
     }
 
+    .gig__header {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .gig__title {
+        font-size: 3vw;
+    }
+
+    .gig__company {
+        padding: 0 10vw;
+        font-size: 2.1vw;
+
+        & > i {
+            margin-left: 2vw;
+            font-size: 3.2vw;
+        }
+    }
+
+    .gig__description {
+        font-size: 2.5vw;
+    }
+
 }
 
 @media screen and (min-width: 960px) {
 
-    // .resume {
-    //     display: flex;
-    //     flex-wrap: wrap;
-    //     align-items: flex-start;
-    // }
-
-    // .resume__section {
-    //     max-width: 350px;
-    //     margin: 0 3vw;
-    // }
-
     .resume__section {
         margin: 2vh 4vw 6vh;
+    }
+
+    .gig__company i {
+        margin-left: 0.6vw;
+        font-size: 2.2vw;
+    }
+
+}
+
+@media screen and (min-width: 1200px) {
+    .resume__section {
+        margin: 2vh 2vh 4vh;
     }
 
     .section__gigs {
@@ -90,6 +150,23 @@
     }
 
     .gig {
-        max-width: 350px;
+        max-width: 30vw;
+    }
+
+    .gig__header {
+        display: block;
+    }
+
+    .gig__company {
+        padding: 0;
+    }
+
+    .gig__title {
+        font-size: 2vw;
+    }
+
+    .gig__description {
+        font-size: 1.7vw;
     }
 }
+    

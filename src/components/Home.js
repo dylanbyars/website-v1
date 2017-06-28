@@ -13,7 +13,7 @@ export const Home = () => {
 
             <header className="home__header">
 
-                <div className="home__db">Dylan Byars</div>
+                <h1 className="home__db">Dylan Byars</h1>
 
                 <div className="home__hustle">
                     <h2>frontend</h2>
@@ -24,9 +24,16 @@ export const Home = () => {
 
             <div className="home__content">
 
-                <section className="section section__skill-chart">
+                <section className="section__skill-chart">
                     
-                    <p className="section__sub-header">Skills</p>
+                    <div className="section__sub-header">
+                        <h3>Skills</h3>
+                        <div className="sub-header__icons">
+                            <i className="fa fa-code"/>
+                            <i className="fa fa-html5"/>
+                            <i className="fa fa-code-fork"/>
+                        </div>
+                    </div>
                     
                     <SkillChart />
 
@@ -36,9 +43,15 @@ export const Home = () => {
                     <CellularAutomaton />
                 </div>
                 
-                <section className="section section__projects">
+                <section className="section__projects">
 
-                    <p className="section__sub-header">Projects</p>
+                    <div className="section__sub-header">
+                        <h3>Projects</h3>
+                        <div className="sub-header__icons">
+                            <i className="fa fa-thermometer-three-quarters"/>
+                            <i className="fa fa-flask"/>
+                        </div>
+                    </div>
 
                     <div className="projects__nav">
 
@@ -60,9 +73,14 @@ export const Home = () => {
                     <CellularAutomaton />
                 </div>
 
-                <section className="section section__experience">
+                <section className="section__experience">
 
-                    <p className="section__sub-header">Experience</p>
+                    <div className="section__sub-header">
+                        <h3>Experience</h3>
+                        <div className="sub-header__icons">
+                            <i className="fa fa-cogs"/>
+                        </div>
+                    </div>
 
                     <Resume />
 

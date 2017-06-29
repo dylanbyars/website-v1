@@ -80,8 +80,11 @@ $color--inline-link-hovered: $dark-red;
   align-items: center;
   font-family: $font--section-sub-header;
   font-size: 14vw;
-  color: $yellow;
+  color: $black;
   letter-spacing: 1.1vw;
+  border-radius: 5vw;
+  margin: 2vh 2vw;
+  background-color: rgba(228, 232, 226, 0.6);
   // border: 1px solid white;
 }
 
@@ -92,11 +95,11 @@ $color--inline-link-hovered: $dark-red;
 }
 
 .section__skill-chart {
-  min-height: 550px;
+  margin-top: 8vh;
 }
 
 .section__skill-chart .section__sub-header {
-  margin-top: 8vh;
+  margin-bottom: 8vh;
 }
 
 .projects__nav {
@@ -128,18 +131,19 @@ $color--inline-link-hovered: $dark-red;
   }
 
   .section__sub-header {
-    justify-content: space-between;
+    // justify-content: space-between;
     font-size: 9vw;
     margin: 0 9vw;
+    padding: 2vw 6vw;
     // color: $black;
   }
 
-  .sub-header__icons {
-    width: 50vw;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-  }
+  // .sub-header__icons {
+  //   width: 40vw;
+  //   display: flex;
+  //   justify-content: space-around;
+  //   align-items: center;
+  // }
 
   .section__projects .sub-header__icons {
     width: 35vw;
@@ -160,6 +164,24 @@ $color--inline-link-hovered: $dark-red;
     flex-direction: row;
     width: 100%;
     padding: 0 12%;
+  }
+
+  .section__sub-header {
+    justify-content: space-between;
+    font-size: 9vw;
+    margin: 0 9vw;
+    padding: 2vw 6vw;
+  }
+
+  .sub-header__icons {
+    width: 40vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .section__projects .sub-header__icons {
+    width: 35vw;
   }
 
   .section__experience .sub-header__icons {

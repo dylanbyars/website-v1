@@ -15,11 +15,14 @@
 
 .section__category {
     margin-right: 5vw;
+    padding: 2vh 4vw;
     font-size: 10vw;
     letter-spacing: 0.6vw;
-    color: $yellow;
+    color: $black;
+    background-color: rgba(228, 232, 226, 0.6);
     align-self: flex-end;
     font-family: $font--resume-section-title;
+    border-radius: 5vw;
     // border: 1px solid white;
 }
 

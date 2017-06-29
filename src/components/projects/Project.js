@@ -4,7 +4,7 @@ import ToggleableNav from './components/ToggleableNav';
 export const Project = ({ children }) => {
 
     const navItems = [
-        { link: 'db', path: '/' }
+        { link: 'home', path: '/' }
     ]
 
     return (

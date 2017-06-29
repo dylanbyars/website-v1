@@ -21,7 +21,7 @@ $height--footer: 35vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 30px;
+  margin-top: calc(35vh / 5);
   font-family: $font--text;
 }
 

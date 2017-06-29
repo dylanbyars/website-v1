@@ -26,6 +26,9 @@ $color--mini-nav-close-border: $yellow;
 // Styles for the toggle when the menu's not open
 
 .nav-toggle__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: absolute;
   width: 100%;
   height: 100%;
@@ -180,6 +183,12 @@ $color--mini-nav-close-border: $yellow;
             transition-delay: $delay;
           }
         }
+      }
+
+      &:hover {
+        transition: 0;
+        transition-delay: 0;
+        color: $color--mini-nav-item-active;
       }
 
       // Hiding the lines

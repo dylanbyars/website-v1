@@ -63,7 +63,7 @@ class ToggleableNav extends Component {
       return (
         <nav className="toggleable-nav nav-toggle--closed">
         
-          <span className="nav-toggle__button" onClick={this.toggleMenu}></span>
+          <span className="nav-toggle__button" onClick={this.toggleMenu}><i className="fa fa-lg fa-bars"/></span>
 
           <div className="nav__items--mini">
             {links}

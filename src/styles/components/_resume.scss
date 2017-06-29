@@ -16,6 +16,8 @@
 .section__category {
     margin-right: 5vw;
     font-size: 10vw;
+    letter-spacing: 0.6vw;
+    color: $yellow;
     align-self: flex-end;
     font-family: $font--resume-section-title;
     // border: 1px solid white;
@@ -50,6 +52,8 @@
 }
 
 .gig__company {
+    display: flex;
+    align-items: center;
     font-size: 6vw;
     font-family: $font--resume-gig;
     margin: 2vh 0 4vh;
@@ -74,7 +78,7 @@
 
     > i {
       margin-left: 4vw;
-      font-size: 4.8vw;
+      font-size: 5.8vw;
     }
 }
 
@@ -104,19 +108,21 @@
         display: flex;
         justify-content: space-around;
         align-items: center;
+        word-wrap: no-wrap;
     }
 
     .gig__title {
-        font-size: 3vw;
+        font-size: 3.5vw;
+        white-space: nowrap;
     }
 
     .gig__company {
-        padding: 0 10vw;
-        font-size: 2.1vw;
+        font-size: 3.1vw;
+        white-space: nowrap;
 
-        & > i {
+        & a > i {
             margin-left: 2vw;
-            font-size: 3.2vw;
+            font-size: 4vw;
         }
     }
 
@@ -132,9 +138,17 @@
         margin: 2vh 4vw 6vh;
     }
 
-    .gig__company i {
-        margin-left: 0.6vw;
-        font-size: 2.2vw;
+    .gig__company {
+        font-size: 1.8vw;
+
+        & a {
+            font-size: 1.8vw;
+        }
+
+        a > i {
+            margin-left: 0.6vw;
+            font-size: 2.0vw;
+        }
     }
 
 }
@@ -153,12 +167,12 @@
         max-width: 30vw;
     }
 
-    .gig__header {
-        display: block;
+    .gig:last-of-type {
+        margin-bottom: 2vh;
     }
 
-    .gig__company {
-        padding: 0;
+    .gig__header {
+        display: block;
     }
 
     .gig__title {

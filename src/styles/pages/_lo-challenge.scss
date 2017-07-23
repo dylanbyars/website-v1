@@ -10,6 +10,8 @@
   background-color: #2E5266;
 	font-family: 'Libre Franklin', sans-serif;
 	
+	// the cubes in the loading spinner. 
+	// animation styles defined in ./styles/components/_periodic-table-app.scss
 	& .cube1, .cube2 {
 		background-color: #eee;
 	}

@@ -1,10 +1,8 @@
 import React, { Component } from 'react'
 import axios from 'axios'
-import { ModalContainer, ModalDialog } from 'react-modal-dialog';
+import { ModalContainer, ModalDialog } from 'react-modal-dialog'
 
 import { TagTile } from './components/TagTile'
-
-// import './App.css'
 
 export default class LOChallenge extends Component {
   constructor(props) {

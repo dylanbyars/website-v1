@@ -20,7 +20,8 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    align-items: center;
+		align-items: center;
+		position: relative;
     height: 20vh;
     width: 100vw;
     margin-bottom: 3vh;
@@ -29,12 +30,29 @@
     border-bottom-right-radius: 50% 40%;
 	}
 
+	& header > .code {
+		position: absolute;
+		top: 3vh;
+		right: 5vw;
+		padding: 1.5vh;
+		text-decoration: none;
+		color: #eee;
+		background-color: #2E5266;
+		border-radius: 4px;
+		transition: 150ms ease-out;
+	}
+
+	& header > .code:hover {
+		color: #2E5266;
+		background-color: #eee;
+	}
+
 	& header > h1 {
     font-size: 50px;
     font-family: 'Permanent Marker', cursive;
 	}
 
-	.tags {
+	& .tags {
     width: 100vw;
     min-height: 100vh;
     display: flex;
@@ -43,7 +61,7 @@
     flex-wrap: wrap;
 	}
 
-	.tag-tile {
+	& .tag-tile {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -53,21 +71,21 @@
     transition: 150ms ease-out;
 	}
 
-	.tag-tile:hover {
+	& .tag-tile:hover {
     cursor: pointer;
     transform: scale(1.1);
 	}
+}
 
-	.modal__item {
-    margin: 3vh 0;
-	}
+.modal__item {
+	margin: 3vh 0;
+}
 
-	.modal__item > a {
-    color: #4E8098;
-    transition: 150ms ease-out;
-	}
+.modal__item > a {
+	color: #4E8098;
+	transition: 150ms ease-out;
+}
 
-	.modal__item > a:hover {
-    color: #FC9E4F;
-	}
+.modal__item > a:hover {
+	color: #FC9E4F;
 }

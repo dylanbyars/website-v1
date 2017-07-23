@@ -35,7 +35,7 @@ class SweetWebsite extends Component {
           <Route path="periodic-table-app" component={PeriodicTableApp} />
           <Route path="weather-app" component={WeatherApp} />
         </Route>
-        <Route path="challenge" component={LOChallenge} />
+        <Route path="lo-challenge" component={LOChallenge} />
       </Router>
 
     )

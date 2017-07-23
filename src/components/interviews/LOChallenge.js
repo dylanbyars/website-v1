@@ -4,6 +4,8 @@ import { ModalContainer, ModalDialog } from 'react-modal-dialog'
 
 import { TagTile } from './components/TagTile'
 
+// styles: https://github.com/dbyars/dylan-byars-v2/blob/redesign1/src/styles/pages/_lo-challenge.scss
+
 export default class LOChallenge extends Component {
   constructor(props) {
     super(props)
@@ -129,6 +131,7 @@ export default class LOChallenge extends Component {
             </ModalContainer>
           }
           <header>
+            <a className="code" href="https://github.com/dbyars/dylan-byars-v2/tree/redesign1/src/components/interviews">code</a>
             <h1>faqs by tag</h1>
             <h3>bigger circle === more popular</h3>
           </header>

@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css?family=Libre+Franklin|Permanent+Marker');
+
+.LOChallenge {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: #2E5266;
+	font-family: 'Libre Franklin', sans-serif;
+	
+	& .cube1, .cube2 {
+		background-color: #eee;
+	}
+
+  & header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 20vh;
+    width: 100vw;
+    margin-bottom: 3vh;
+    background-color: rgba(228, 232, 226, 0.6);
+    border-bottom-left-radius: 50% 40%;
+    border-bottom-right-radius: 50% 40%;
+	}
+
+	& header > h1 {
+    font-size: 50px;
+    font-family: 'Permanent Marker', cursive;
+	}
+
+	.tags {
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+	}
+
+	.tag-tile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 1vw;
+    border-radius: 50%;
+    border: 1px solid black;
+    transition: 150ms ease-out;
+	}
+
+	.tag-tile:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+	}
+
+	.modal__item {
+    margin: 3vh 0;
+	}
+
+	.modal__item > a {
+    color: #4E8098;
+    transition: 150ms ease-out;
+	}
+
+	.modal__item > a:hover {
+    color: #FC9E4F;
+	}
+}

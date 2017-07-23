@@ -1,25 +1,28 @@
-import React, { Component } from 'react';
-import { render } from 'react-dom';
-import { Router, Route, browserHistory } from 'react-router';
-import ReactGA from 'react-ga';
+import React, { Component } from 'react'
+import { render } from 'react-dom'
+import { Router, Route, browserHistory } from 'react-router'
+import ReactGA from 'react-ga'
 
-import { Home } from './components/Home';
-import { Project } from './components/projects/Project';
-import PeriodicTableApp from './components/projects/components/periodic-table-app/PeriodicTableApp';
-import WeatherApp from './components/projects/components/weather-app/WeatherApp';
-import './styles/main.scss';
+import { Home } from './components/Home'
+import { Project } from './components/projects/Project'
+import PeriodicTableApp from './components/projects/components/periodic-table-app/PeriodicTableApp'
+import WeatherApp from './components/projects/components/weather-app/WeatherApp'
+
+import LOChallenge from './components/interviews/LOChallenge'
+
+import './styles/main.scss'
 
 class SweetWebsite extends Component {
 
   componentDidMount() {
     // Initialize the google analytics element
-    ReactGA.initialize('UA-83304510-1');
+    ReactGA.initialize('UA-83304510-1')
   }
 
   // a function that fires a tracking event to the google analytics element when the route changes
   logPageView() {
-    ReactGA.set({ page: window.location.pathname });
-    ReactGA.pageview(window.location.pathname);
+    ReactGA.set({ page: window.location.pathname })
+    ReactGA.pageview(window.location.pathname)
   }
 
   render() {
@@ -32,10 +35,11 @@ class SweetWebsite extends Component {
           <Route path="periodic-table-app" component={PeriodicTableApp} />
           <Route path="weather-app" component={WeatherApp} />
         </Route>
+        <Route path="challenge" component={LOChallenge} />
       </Router>
 
     )
   }
 }
 
-render(<SweetWebsite />, document.getElementById('root'));
+render(<SweetWebsite />, document.getElementById('root'))
